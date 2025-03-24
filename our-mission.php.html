@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REBs – Moving Forward</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wght@200&amp;display=swap" rel="stylesheet">
+
+    <style>body {
+            font-family: montserrat;
+            font-weight: 400;
+            font-size: 22px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Top Menu */
+
+        h1 {
+            font-size: 2.5em;
+            font-style: italic;
+        }
+        h1, h2 {
+            color:#33498e;
+            font-weight: Bold;
+            font-family: noto-serif;
+        }
+
+        b {
+            color:#33498e;
+            font-weight: 700;
+            font-style: italic;
+            font-size: 26px;
+        }
+
+    .noto-serif {
+      font-family: "Noto Serif", serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: italic;
+      font-variation-settings:"wdth" 75;
+}
+
+    .montserrat {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 200;
+      font-style: normal;
+    }
+
+        nav {
+            background: #33498e;
+            padding: 0px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid silver;
+        }
+        nav img {
+            height: 100px;
+            margin-left: 0px;
+        }
+        nav div {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: #FFF;
+            font-family: montserrat, Arial, sans-serif;
+            text-decoration: none;
+            background: #33498e;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline #d12428 4px;
+            /* background: #d1242a;
+            border-radius: 5px; */
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* First Row */
+        .first-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+        }
+        .first-row img {
+            max-width: 40%;
+            height: auto;
+            flex: 1;
+        }
+        .first-row h1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Second Row */
+        .second-row {
+            padding: 24px;
+            line-height:1.8;
+            text-align: left;
+            background-color: #f3f3f3;
+        }
+
+        /* Third Row */
+        .third-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            padding: 0px;
+        }
+        .third-row div {
+            background-color: #83a9da;
+            flex: 1;
+            padding: 15px;
+            max-width: ;
+            border: 4px solid #a8c5e7;
+            margin: 2px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .third-row div:hover {
+            background: #a8c5e7;
+            border-bottom: 4px solid red;
+        }
+        .third-row ul {
+            text-align: left;
+            padding-left: 3.5em;
+        }
+
+        /* Fourth Row */
+        blockquote {
+            padding: 20px;
+            font-style: italic;
+            text-align: center;
+            background: #f7e8e7;
+            text-align: center;
+            margin: 2em 7em;
+            border-radius: 5px;
+            border-left: solid 3px #33498e;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            font-family: montserrat;
+            font-size: 18px;
+        }
+        .footer-column a:hover {text-decoration: underline #d12428 4px;}
+        .footer-column {
+            flex: 1;
+            padding-left: 60px;
+            padding-right: 20px;
+            padding-top:100px;
+            padding-bottom: 100px;
+            min-width: 200px;
+        }
+        .footer-column a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 5px 0;
+
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: left;
+                background-color: #33498e;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                border-bottom: 1px solid red;
+            }
+
+            .logo {display:none;}
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: block;
+            }
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav img {
+                margin-bottom: 10px;
+            }
+
+    /* Stack first-row elements */
+    .first-row {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        padding:0px;
+    }
+    .first-row img, .first-row h1 {
+        max-width: 100%;
+        width: 100%;
+        padding:0px;
+    }
+    .second-row {padding:20px;}
+
+    /* Stack third-row elements */
+    .third-row {
+        flex-direction: column;
+        display: block;
+        align-items: center;
+        width: 100%;
+        padding:0px;
+    }
+        .third-row div {
+        max-width: 100%;
+    }
+
+ul {
+padding-left: 15px;
+}
+        blockquote {
+            margin: 0;
+        }
+
+    .footer-column {
+        padding-left: 90px;
+    padding-right: 20px;
+    padding-top:30px;
+    padding-bottom: 30px;
+    }
+
+}
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <!-- Hamburger Icon -->
+        <button class="hamburger" id="hamburger">&#9776;</button>
+        <div>
+        <!-- Navigation Links -->
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="our-mission.php.html">Our Mission</a>
+            <a href="who-we-are.php.html">Who We Are</a>
+            <a href="podcast.php.html">Podcast</a>
+            <a href="events.php.html">Events</a>
+            <a href="contact.php.html">Contact Us</a>
+        </div>
+        </div>
+    </nav>
+
+    <div class="first-row">
+       <img class="logo-none" src="images/2024_LOGO_REBS_Full-Color.jpg" alt="Logo">
+        <h1>Our Mission</h1>
+    </div>
+
+
+<div class="second-row">
+<p><b>Our mission:</b> identify and defend against political actions that threaten the fundamental tenets of what American stands for:</p>
+<ul>
+<li>Freedom to speak freely without fear of retribution</li>
+<li>Freedom to choose what is right for our bodies</li>
+<li>Freedom to choose political representation</li>
+<li>Freedom to reside under a judicial system that is not weaponized for political gain</li>
+</ul>
+<p><b>We believe</b> every individual has the right and freedom to pursue the American Dream.</p>
+<ul>
+<li>Without restrictions</li>
+<li>Regardless of age, gender, sexual orientation, culture, ethnicity or other defining characteristic</li>
+</ul>
+<p>We will support and advance our mission by focusing on the following <b>three pillars of activity.</b> All to be championed, implemented and powered by our membership.
+</p>
+</div>
+
+
+<div class="third-row">
+<div>
+   <h2>Pillar #1: Activism</h2>
+   <hr />
+   Reverse, stop or delay an action that is counter to our mission
+   <ul>
+   <li>Calling/visiting political representatives</li>
+   <li>Writing postcards/phone banking</li>
+   <li>Marches, rallies and protests</li>
+   </ul>
+</div>
+
+<div>
+   <h2><strong>Pillar #2: Activism</strong></h2>
+   <hr />
+   Identify and support CT political representatives who LEAD, not FOLLOW
+   <ul>
+   <li>Support and champion leaders who lean into</li>
+   <li>their communities.</li>
+   <li>Create a quarterly report card of the voting activity</li>
+   <li>Support candidates that challenge entitled incumbents</li>
+   <li>Track and report on the voting record of our representatives</li>
+   </ul>
+</div>
+
+<div>
+   <h2><strong>Pillar #3: Communication</strong></h2>
+   <hr />
+   REBs will use social media to spread truth
+   <ul>
+   <li>Fight the lies and misleading statements by the Republican party</li>
+   <li>Create easy, quick and engaging education worthy of sharing</li>
+   <li>Test messaging and strategies to determine which are the most effective</li>
+   </ul>
+</div>
+</div>
+
+<div class="second-row"><b>In Summary:</b>
+<p>All of our actions will be aimed at accomplishing the following goals: Stop the Red Wave in 2026 and 2028 – win back Congress (2026) and the White House (2028). Remove ineffective Democratic elders and make way for young blood that can identify with everyday Americans. Support leadership that is committed to what is right rather than fear for their political longevity. Collaborate with other resistance organizations to further common goals, reduce redundancy and leverage the power of numbers.</p>
+</div>
+
+     
+  <footer>
+        <div class="footer-column">
+            REBs<br>
+            - Redding, CT<br>
+            - Easton, CT<br>
+            - Bethel, CT<br>
+        </div>
+        <div class="footer-column">
+            <a href="contact.php.html">Contact Us</a>
+            <a href="privacy-policy.php.html">Privacy Policy</a>
+        </div>
+        <div class="footer-column">
+
+<style>.social-icon  {
+    color: #1185fe; /* Default color */
+    transition: color 0.3s ease-in-out;
+  }
+
+  .social-icon :hover {
+    color: white; /* Hover color */
+  }
+</style>
+
+<p>
+Follow us on Bluesky
+<a href="https://bsky.app/profile/rebs-movingforward.bsky.social"><svg class="social-icon" width="60" height="53" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg">
+  <title>Bluesky</title>
+  <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"/>
+</svg>
+</a>
+
+</p>
+        
+        </div>
+    </footer>
+
+
+    <script>
+        // Get the hamburger button and nav links
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+
+        // Toggle active class on hamburger click
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+    
+</body>
+</html>
