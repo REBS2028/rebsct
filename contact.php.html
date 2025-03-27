@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wght@200&amp;display=swap" rel="stylesheet">
 
+<script async src="https://tally.so/widgets/embed.js"></script>
     <style>body {
             font-family: montserrat;
             font-weight: 400;
@@ -22,14 +23,15 @@
         /* Top Menu */
 
         h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             font-style: italic;
+            font-family: "Noto Serif", serif;
         }
         h1, h2 {
             color:#33498e;
             font-weight: Bold;
-            font-family: noto-serif;
         }
+        h2 {font-family: montserrat;}
 
         b {
             color:#33498e;
@@ -49,54 +51,95 @@
     .montserrat {
       font-family: "Montserrat", sans-serif;
       font-optical-sizing: auto;
-      font-weight: 200;
+      font-weight: ;
       font-style: normal;
     }
 
-        nav {
-            background: #33498e;
-            padding: 0px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid silver;
-        }
-        nav img {
-            height: 100px;
-            margin-left: 0px;
-        }
-        nav div {
-            display: flex;
-            gap: 15px;
-        }
-        nav a {
-            color: #FFF;
-            font-family: montserrat, Arial, sans-serif;
-            text-decoration: none;
-            background: #33498e;
-            padding: 10px 20px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline #d12428 4px;
-            /* background: #d1242a;
-            border-radius: 5px; */
-        }
 
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            font-size: 2rem;
-            background: none;
-            border: none;
+    
+
+
+
+          .menu {
+            width: 300px;
+            height: 100vh;
+            background: #33498e;
             color: white;
+            position: fixed;
+            top: 0;
+            right: -300px;
+            transition: right 0.3s;
+            padding-top: 60px;
+            z-index: 1001;
+        }
+        .menu a {
+            text-align: center;
+            display: block;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            border-bottom: 1px solid #122349;
+        }
+        .menu a:hover {
+            background: #122349;
+            color: #fff;
+        }
+        .menu-toggle {
+            position: absolute;
+            top: 3px;
+            right: 5px;
+            font-size: 55px;
+            cursor: pointer;
+            color: #fff;
+            border: 1px solid #000;
+            line-height: 0px;
+            z-index: 1002;
+        }
+        .menu.open {
+            right: 0;
         }
 
-        .nav-links {
-            display: flex;
-            gap: 15px;
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 1000;
         }
+        .overlay.show {
+            display: block;
+        }
+
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+        .bar1, .bar2, .bar3 {
+              width: 35px;
+              height: 5px;
+              background-color: #333;
+              border-radius: 5px;
+              margin: 6px 0;
+              transition: 0.4s;
+        }
+
+        .change .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+        .change .bar2 {opacity: 0;}
+
+        .change .bar3 {
+          transform: translate(0, -11px) rotate(45deg);
+        }
+
+
+
+
 
         /* First Row */
         .first-row {
@@ -190,37 +233,11 @@
 
         }
 
+.image-secondary {float:left; margin-right: 45px; width:50%;}
+
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                width: 100%;
-                text-align: left;
-                background-color: #33498e;
-                position: absolute;
-                top: 60px;
-                left: 0;
-                border-bottom: 1px solid red;
-            }
 
-            .logo {display:none;}
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: block;
-            }
-
-            nav {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav img {
-                margin-bottom: 10px;
-            }
+.image-secondary {width:100%; margin-bottom: 35px;}
 
     /* Stack first-row elements */
     .first-row {
@@ -228,6 +245,7 @@
         text-align: center;
         width: 100%;
         padding:0px;
+        margin-top: 20px;
     }
     .first-row img, .first-row h1 {
         max-width: 100%;
@@ -267,21 +285,37 @@ padding-left: 15px;
 </head>
 <body>
     
-    <nav>
-        <!-- Hamburger Icon -->
-        <button class="hamburger" id="hamburger">&#9776;</button>
-        <div>
-        <!-- Navigation Links -->
-        <div class="nav-links" id="nav-links">
-            <a href="index.html">Home</a>
-            <a href="our-mission.php.html">Our Mission</a>
-            <a href="who-we-are.php.html">Who We Are</a>
-            <a href="podcast.php.html">Podcast</a>
-            <a href="events.php.html">Events</a>
-            <a href="contact.php.html">Contact Us</a>
-        </div>
-        </div>
-    </nav>
+
+    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">
+
+<div class="container">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div></button>
+
+    <div class="menu" id="sideMenu">
+        <a href="index.html">REBs &mdash; Home</a>
+        <a href="who-we-are.php.html">Who We Are</a>
+        <a href="our-mission.php.html">Our Mission</a>
+          <a href="events.php.html">Events</a>
+        <a href="podcast.php.html"><img src="images/gygk-logo.png" style="width:100%;"></a>
+    </div>
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("sideMenu");
+            const overlay = document.getElementById("overlay");
+            const button = document.getElementById("menuButton");
+            menu.classList.toggle("open");
+            overlay.classList.toggle("show");
+            button.classList.toggle("open");
+            button.classList.toggle("change");
+        }
+    </script>
+
+
+
 <style>form {
     max-width: 440px;
     margin: auto;
@@ -306,7 +340,7 @@ input, textarea {
     padding: 0px;
     margin-top:-15px;
 }
-button {
+#button-submit {
     background: #82a8d9;
     color: #32498d;
     font-size: 20px;
@@ -317,7 +351,7 @@ button {
     width:120px;
     cursor: pointer;
 }
-button:hover {
+#button-submit:hover {
     background: #32498d;
     color: white;
 
@@ -325,7 +359,7 @@ button:hover {
 </style>
 
     <div class="first-row">
-        <img class="" src="images/2024_LOGO_REBS_Full-Color.jpg" alt="Logo">
+        <img class="" src="images/logo-rebs.png" alt="Logo">
         <h1>Contact Us</h1>
     </div>
 
@@ -340,7 +374,7 @@ button:hover {
     <label for="message">Message:</label>
     <textarea id="message" name="entry.839337160" required maxlength="600" oninput="updateCounter()"></textarea>
     <div class="counter" id="charCounter">0/600</div>
-    <button type="submit">Submit</button>
+    <button id="button-submit" type="submit">Submit</button>
 </form>
 </div>
 
@@ -371,13 +405,15 @@ button:hover {
     
   <footer>
         <div class="footer-column">
-            REBs<br>
-            - Redding, CT<br>
-            - Easton, CT<br>
-            - Bethel, CT<br>
+          <a href="index.html"> REBs &mdash; Home</a>
+        <a href="who-we-are.php.html">Who We Are</a>
+        <a href="our-mission.php.html">Our Mission</a>
+          <a href="events.php.html">Events</a>
         </div>
         <div class="footer-column">
-            <a href="contact.php.html">Contact Us</a>
+            <a href="podcast.php.html">Girl, You Gotta Know &mdash; a REBs Podcast</a>
+             <a href="#tally-open=wQ4dvY&amp;tally-layout=modal&amp;tally-emoji-animation=none">Become a member</a>
+            <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>
             <a href="privacy-policy.php.html">Privacy Policy</a>
         </div>
         <div class="footer-column">
@@ -393,7 +429,6 @@ button:hover {
 </style>
 
 <p>
-Follow us on Bluesky
 <a href="https://bsky.app/profile/rebs-movingforward.bsky.social"><svg class="social-icon" width="60" height="53" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg">
   <title>Bluesky</title>
   <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"/>
@@ -404,18 +439,6 @@ Follow us on Bluesky
         
         </div>
     </footer>
-
-
-    <script>
-        // Get the hamburger button and nav links
-        const hamburger = document.getElementById("hamburger");
-        const navLinks = document.getElementById("nav-links");
-
-        // Toggle active class on hamburger click
-        hamburger.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-        });
-    </script>
     
 </body>
 </html>
