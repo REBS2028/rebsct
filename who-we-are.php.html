@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REBs – Moving Forward</title>
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wght@200&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wdth,wght@75,800&amp;display=swap" rel="stylesheet">
+
+
 
 <script async src="https://tally.so/widgets/embed.js"></script>
     <style>body {
-            font-family: montserrat;
+            font-family: "Montserrat", sans-serif;
             font-weight: 400;
             font-size: 22px;
             margin: 0;
@@ -20,124 +23,173 @@
             box-sizing: border-box;
         }
 
-        /* Top Menu */
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px;
+            background: white;
+            width: 98%;
+        }
+        .logo img {
+            height: 100px;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        .nav-links li {
+            display: inline;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .nav-links a:hover {
+            border-bottom: 2px solid red;
+        }
+
+        .member-btn {
+            background: #33498e;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .member-btn:hover {
+            background: #d74a48;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background: black;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .hamburger.active div:nth-child(1) {
+            transform: translateY(13px) rotate(45deg);
+        }
+        .hamburger.active div:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active div:nth-child(3) {
+            transform: translateY(-13px) rotate(-45deg);
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            top: 90px;
+            left: 0;
+            width: 100%;
+            background: white;
+            text-align: center;
+            padding: 20px 0;
+            z-index: 1000;
+        }
+        .mobile-menu a {
+            padding: 10px;
+            margin: 5px 0;
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            width:100%;
+        }
+        .mobile-menu.active {
+    display: flex;
+    }
+
+
+
+
+
+
+
+
+
+
+
 
         h1 {
-            font-size: 2em;
+            color: #ffffff;
             font-style: italic;
-            font-family: "Noto Serif", serif;
-        }
-        h1, h2 {
-            color:#33498e;
             font-weight: Bold;
+            font-family: "Noto Serif", serif;
+            text-transform: capitalize;
         }
-        h2 {font-family: montserrat;}
+        h2 {
+            color: #33498e;
+            font-weight: Bold;
+            font-family: "Noto Serif", serif;
+            text-transform: capitalize;
+        }   
 
         b {
-            color:#33498e;
+            color: #33498e;
             font-weight: 700;
             font-style: italic;
             font-size: 26px;
         }
 
-    .noto-serif {
-      font-family: "Noto Serif", serif;
-      font-optical-sizing: auto;
-      font-weight: 700;
-      font-style: italic;
-      font-variation-settings:"wdth" 75;
+
+   
+
+/* Container holding the hero image and text */
+.container {
+  position: relative;
+  text-align: center;
 }
 
-    .montserrat {
-      font-family: "Montserrat", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: ;
-      font-style: normal;
+/* Overlay hero text */
+.hero-overlay {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 99% ;
+  padding:;
+  z-index: 1;
+  color: #ffffff;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2); 
+}
+.hero-headline {
+    position:absolute;
+    top:25%;
+    left:40px;
+}
+
+/* hero image aspect ratio */
+    .image-container {
+        width: 100%;
+        aspect-ratio: 20 / 8; 
+        
+    }
+    .cropped-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Crop and cover the container */
+
     }
 
 
-    
 
-
-
-          .menu {
-            width: 300px;
-            height: 100vh;
-            background: #33498e;
-            color: white;
-            position: fixed;
-            top: 0;
-            right: -300px;
-            transition: right 0.3s;
-            padding-top: 60px;
-            z-index: 1001;
-        }
-        .menu a {
-            text-align: center;
-            display: block;
-            padding: 15px;
-            color: white;
-            text-decoration: none;
-            cursor: pointer;
-            border-bottom: 1px solid #122349;
-        }
-        .menu a:hover {
-            background: #122349;
-            color: #fff;
-        }
-        .menu-toggle {
-            position: absolute;
-            top: 3px;
-            right: 5px;
-            font-size: 55px;
-            cursor: pointer;
-            color: #fff;
-            border: 1px solid #000;
-            line-height: 0px;
-            z-index: 1002;
-        }
-        .menu.open {
-            right: 0;
-        }
-
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(255, 255, 255, 0.5);
-            z-index: 1000;
-        }
-        .overlay.show {
-            display: block;
-        }
-
-
-.container {
-  display: inline-block;
-  cursor: pointer;
-}
-        .bar1, .bar2, .bar3 {
-              width: 35px;
-              height: 5px;
-              background-color: #333;
-              border-radius: 5px;
-              margin: 6px 0;
-              transition: 0.4s;
-        }
-
-        .change .bar1 {
-            transform: translate(0, 11px) rotate(-45deg);
-        }
-        .change .bar2 {opacity: 0;}
-
-        .change .bar3 {
-          transform: translate(0, -11px) rotate(45deg);
-        }
-
-
+/* quotation */
+    .quote {text-align: center;font-size: 2em; font-family:'Noto Sans'; font-style: italic;}
+    .qleft{color:#33498e;text-align:left; font-size: 7em;}
+    .qright {color:#33498e;text-align: right; font-size: 7em; line-height: .75em;}
+    .qtext {margin-top:-4em;padding:0px 3em;}
 
 
 
@@ -164,7 +216,6 @@
             padding: 24px;
             line-height:1.8;
             text-align: left;
-            background-color: #f3f3f3;
         }
 
         /* Third Row */
@@ -195,16 +246,11 @@
         }
 
         /* Fourth Row */
-        blockquote {
-            padding: 20px;
-            font-style: italic;
-            text-align: center;
-            background: #f7e8e7;
-            text-align: center;
-            margin: 2em 7em;
-            border-radius: 5px;
-            border-left: solid 3px #33498e;
-        }
+
+
+
+
+
 
         /* Footer */
         footer {
@@ -215,6 +261,7 @@
             justify-content: space-around;
             font-family: montserrat;
             font-size: 18px;
+            margin-top:-10px;
         }
         .footer-column a:hover {text-decoration: underline #d12428 4px;}
         .footer-column {
@@ -233,12 +280,32 @@
 
         }
 
-.image-secondary {float:left; margin-right: 45px; width:50%;}
+  .social-icon  {
+    color: #1185fe; /* Default color */
+    transition: color 0.3s ease-in-out;
+  }
 
-        @media (max-width: 768px) {
+  .social-icon :hover {
+    color: white; /* Hover color */
+  }
 
-.image-secondary {width:100%; margin-bottom: 35px;}
+@media (max-width: 1023px) {
 
+    .nav-links, .member-btn {
+        display: none;
+    }
+
+
+    .hamburger {
+        display: flex;
+        margin-right:10px;
+        }
+}
+
+
+
+
+@media (max-width: 768px) {
     /* Stack first-row elements */
     .first-row {
         flex-direction: column;
@@ -284,47 +351,62 @@ padding-left: 15px;
     </style>
 </head>
 <body>
-    
 
-    <button class="menu-toggle" id="menuButton" onclick="toggleMenu()">
+    <nav class="nav">
+        <a href="index.html" class="logo"><img src="images/logo-rebs.png" alt="Logo"></a>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="who-we-are.php.html">Who We Are</a></li>
+                <li><a href="our-mission.php.html">Our Mission</a></li>
+                <li><a href="events.php.html">What We're Up To</a></li>
+                <li><a href="podcast.php.html">Podcast</a></li>
+                
+            </ul>
+        </div>
+        <button class="member-btn" 
+            data-tally-open="wQ4dvY"
+            data-tally-layout="modal"
+            data-tally-emoji-animation="none" 
+            style="cursor:pointer;">
+        Become a Member</button>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
 
-<div class="container">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div></button>
-
-    <div class="menu" id="sideMenu">
-        <a href="index.html">REBs &mdash; Home</a>
+    <div class="mobile-menu">
         <a href="who-we-are.php.html">Who We Are</a>
         <a href="our-mission.php.html">Our Mission</a>
-          <a href="events.php.html">Events</a>
-        <a href="podcast.php.html"><img src="images/gygk-logo.png" style="width:100%;"></a>
+        <a href="events.php.html">What We're Up To</a>
+        <a href="podcast.php.html">Podcast</a>
+         <div data-tally-open="wQ4dvY"
+        data-tally-layout="modal"
+        data-tally-emoji-animation="none" 
+        style="cursor:pointer;width:100%;">Become a Member</div>
     </div>
-    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById("sideMenu");
-            const overlay = document.getElementById("overlay");
-            const button = document.getElementById("menuButton");
-            menu.classList.toggle("open");
-            overlay.classList.toggle("show");
-            button.classList.toggle("open");
-            button.classList.toggle("change");
-        }
+    function toggleMenu() {
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const hamburger = document.querySelector(".hamburger");
+    
+        mobileMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+}
     </script>
 
 
+   
+<div class="container image-container">
+    <img class="cropped-image" src="images/istockphoto-1766290065-1024x1024.jpg">
+  <div class="hero-overlay"><h1 class="hero-headline">Who Are We?<br>We Are You!</h1></div>
+</div>
 
-
-    <div class="first-row">
-       <img class="logo-none" src="images/logo-rebs.png" alt="Logo">
-        <h1>Who Are We?<br>We Are You!</h1>
-    </div>
 
 <div class="second-row">
 <p>
-<img class="image-secondary" src ="images/get-active.jpg">
 Within days of the 2024 Presidential election, it was clear a massive, and unwelcome, shift was underway in our country. It was no longer possible to assume that even if the Republicans were at the helm, that we would survive. November 5th, 2025 changed all that.
 </p>
 <p>
@@ -333,12 +415,22 @@ And so REBs began with a simple Facebook post in the town of Redding, CT asking 
 We are not lawyers; we are not politicians. We are just like you. We are concerned Americans (and yes, mostly women) trying to stop the trajectory of the MAGA train destined to destroy all we hold dear. We are glad you are here and we hope you will join the opposition movement. You are needed.
 </p>
 <h2 style="font-family:'Noto Serif';font-style: italic; font-size: 1.8em;margin-bottom: -20px;">Celeste</h2>
-<br>
 Rebs Founder
 </div>
-<blockquote>A journey of 1,000 miles starts with one small step.”</blockquote>
 
-    
+    <div style="padding: 0px 2em;">
+        <div class="quote">
+            <div class="qleft">&ldquo;</div>
+            <div class="qtext">Life shrinks or expands in proportion to one's courage.<span style="white-space:nowrap;padding-left:1em;">– Anaïs Nin</span> </div>
+            <div class="qright">&rdquo;</div>  
+        </div>
+    </div>  
+
+  
+
+<div>
+  <img style="width:100%;" src="images/istockphoto-851910974-1024x1024.jpg" alt="silouette of crowd">
+</div>  
   <footer>
         <div class="footer-column">
           <a href="index.html"> REBs &mdash; Home</a>
@@ -353,16 +445,6 @@ Rebs Founder
             <a href="privacy-policy.php.html">Privacy Policy</a>
         </div>
         <div class="footer-column">
-
-<style>.social-icon  {
-    color: #1185fe; /* Default color */
-    transition: color 0.3s ease-in-out;
-  }
-
-  .social-icon :hover {
-    color: white; /* Hover color */
-  }
-</style>
 
 <p>
 <a href="https://bsky.app/profile/rebs-movingforward.bsky.social"><svg class="social-icon" width="60" height="53" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg">
