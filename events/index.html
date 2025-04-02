@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -379,13 +379,13 @@ padding-left: 15px;
 <body>
 
     <nav class="nav">
-        <a href="index.html" class="logo"><img src="images/logo-rebs.png" alt="Logo"></a>
+        <a href="../index.html" class="logo"><img src="../images/logo-rebs.png" alt="Logo"></a>
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="who-we-are/index.html">Who We Are</a></li>
-                <li><a href="our-mission/index.html">Our Mission</a></li>
-                <li><a href="events/index.html">What We're Up To</a></li>
-                <li><a href="podcast/index.html">Podcast</a></li>
+                <li><a href="../who-we-are/index.html">Who We Are</a></li>
+                <li><a href="../our-mission/index.html">Our Mission</a></li>
+                <li><a href="index.html">What We're Up To</a></li>
+                <li><a href="../podcast/index.html">Podcast</a></li>
                 
             </ul>
         </div>
@@ -403,10 +403,10 @@ padding-left: 15px;
     </nav>
 
     <div class="mobile-menu">
-        <a href="who-we-are/index.html">Who We Are</a>
-        <a href="our-mission/index.html">Our Mission</a>
-        <a href="events/index.html">What We're Up To</a>
-        <a href="podcast/index.html">Podcast</a>
+        <a href="../who-we-are/index.html">Who We Are</a>
+        <a href="../our-mission/index.html">Our Mission</a>
+        <a href="index.html">What We're Up To</a>
+        <a href="../podcast/index.html">Podcast</a>
          <div data-tally-open="wQ4dvY"
         data-tally-layout="modal"
         data-tally-emoji-animation="none" 
@@ -424,67 +424,195 @@ padding-left: 15px;
     </script>
 
 
+
+    <style>#events {
+            list-style-type: none;
+            padding: 10px;
+        }
+
+        .events {
+        	text-align: left;
+        }
+
+        .event-item {
+            background-color: #fff;
+            border: 2px solid ;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 15px;
+        }
+
+        .event-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #204187;
+        }
+
+        .event-time {
+            font-size: 18px;
+            color: #34495e;
+        }
+
+        .event-description {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #7f8c8d;
+        }
+
+        .event-location {
+            font-size: 18px;
+            color: #e74c3c;
+            margin-top: 5px;
+        }
+
+
+        #loadMore {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #loadMore:hover {
+            background-color: #204187;
+        }
+
+        #loadMore:disabled {
+            background-color: #95a5a6;
+            cursor: not-allowed;
+        }
+
+    </style>
+
 <div class="container image-container">
-    <img class="cropped-image" src="images/take-action-hero.jpg">
-    <div class="hero-overlay"><h1 style="top:30px;" class="hero-headline">Every Action Counts.<br>
-    Together We Make<br> a Difference.</h1></div>
+   <img class="cropped-image" src="../images/events-hero.jpg">
+   <div class="hero-overlay"><h1 class="hero-headline">What We're up To</h1></div>
 </div>
 
-    <div class="second-row">
-        <p>If you are looking to fight back, delay, impede and ultimately extinguish the current administration, then you are in the right place. We believe <b>the people ARE the United States</b> – not the White House, not Capitol Hill, or any other federal building. Nor is it the people elected to represent us. At the end of the day, <b>we rule</b>, we are the United States, and it’s up to us to keep it that way. So, let’s get busy!</p>
-    </div>
-    
-<div class="third-row">
-    <div data-tally-open="wQ4dvY"
-         data-tally-layout="modal"
-         data-tally-emoji-animation="none" 
-         style="cursor:pointer;">
 
-        <h2>Become a Member</h2>
-        <p>Get on our mailing list and receive updates and calls to action directly in your inbox.</p>
-    </div>
 
-    <div onclick="location.href='events.php'">
-        <h2>Get Active</h2>
-        <p>Join a local REBs member meeting, attend a protest, write postcards, hang overpass bridge signs, and more.</p>
-    </div>
-    
-    <div data-tally-open="wQ4dvY"
-        data-tally-layout="modal"
-        data-tally-emoji-animation="none" 
-        style="cursor:pointer;">
+<div>
 
-        <h2>Tools and Resources</h2>
-        <p>Each week we tell you who to call and what to say, we also provide links to help to know what’s what.</p>
-    </div>
+    <style>ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Two equal columns */
+  gap: 10px; /* Adjust spacing between items */
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+    </style>
+<div class="events">
+    <ul id="events"></ul>
+
 </div>
-    
+</div>
+<button id="loadMore">See More Events</button>
 
-    <div style="padding: 0px 2em;">
-        <div class="quote">
-            <div class="qleft">&ldquo;</div>
-            <div class="qtext">If we do not change our direction, we are likely to end up where we are headed. <span style="white-space:nowrap; padding-left:1em;">– Lau Tzu</span> </div>
-            <div class="qright">&rdquo;</div>  
-        </div>
-    </div>    
+    <script>
+        const API_KEY = "AIzaSyA4d3vhjbVlZKxLgpCTsHpH59CGOhq4s3c";  // Replace with your API Key
+        const CALENDAR_ID = "f52f426ad844a7624ac149b68d7c865f6e20b8511f496f25e3cc10a2d8342483@group.calendar.google.com";  // Replace with your Public Calendar ID
+        let nextPageToken = null;
 
-        
-    
-  <div>
-  <img style="width:100%; position:relative;top: 90px; z-index: -2;" src="images/crowd-footer.jpg" alt="silouette of crowd">
+        async function fetchCalendarEvents() {
+            let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${new Date().toISOString()}&maxResults=5&singleEvents=true&orderBy=startTime`;
+
+            if (nextPageToken) {
+                url += `&pageToken=${nextPageToken}`;
+            }
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (data.items) {
+                    const eventList = document.getElementById("events");
+
+                    data.items.forEach(event => {
+                        const eventItem = document.createElement("li");
+                        eventItem.classList.add("event-item");
+
+                        const eventTitle = document.createElement("div");
+                        eventTitle.classList.add("event-title");
+                        eventTitle.textContent = event.summary;
+
+                        const eventTime = document.createElement("div");
+                        eventTime.classList.add("event-time");
+                        const eventStart = event.start.dateTime || event.start.date;
+                        const formattedDate = new Date(eventStart);
+
+                        if (!isNaN(formattedDate.getTime())) {
+                            const formattedTime = formattedDate.toLocaleString("en-US", {
+                                weekday: "long",
+                                year: "numeric",
+                                month: "long",
+                                day: "numeric",
+                                hour: "numeric",
+                                minute: "2-digit",
+                                hour12: true
+                            });
+                            eventTime.textContent = `Starts: ${formattedTime}`;
+                        } else {
+                            eventTime.textContent = "No start time available";
+                        }
+
+                        const eventDescription = document.createElement("div");
+                        eventDescription.classList.add("event-description");
+                        eventDescription.textContent = event.description ? event.description : "No description available";
+
+                        const eventLocation = document.createElement("div");
+                        eventLocation.classList.add("event-location");
+                        eventLocation.textContent = event.location ? `Location: ${event.location}` : "No location available";
+
+                        eventItem.appendChild(eventTitle);
+                        eventItem.appendChild(eventTime);
+                        eventItem.appendChild(eventDescription);
+                        eventItem.appendChild(eventLocation);
+                        eventList.appendChild(eventItem);
+                    });
+
+                    nextPageToken = data.nextPageToken || null;
+
+                    if (!nextPageToken) {
+                        document.getElementById("loadMore").disabled = true;
+                        document.getElementById("loadMore").textContent = "No More Events";
+                    }
+                } else {
+                    document.getElementById("events").innerHTML = "No upcoming events found.";
+                }
+            } catch (error) {
+                console.error("Error fetching calendar events:", error);
+            }
+        }
+
+        document.getElementById("loadMore").addEventListener("click", fetchCalendarEvents);
+
+        fetchCalendarEvents();
+    </script>
+
+
+<div>
+  <img style="width:100%; position:relative;top: 90px; z-index: -2;" src="../images/crowd-footer.jpg" alt="silouette of crowd">
 </div>  
   <footer>
         <div class="footer-column">
           <a href="index.html"> REBs &mdash; Home</a>
-        <a href="who-we-are/index.html">Who We Are</a>
-        <a href="our-mission/index.html">Our Mission</a>
-          <a href="events/index.html">Events</a>
+        <a href="../who-we-are/index.html">Who We Are</a>
+        <a href="../our-mission/index.html">Our Mission</a>
+          <a href="index.html">Events</a>
         </div>
         <div class="footer-column">
-            <a href="podcast/index.html">Girl, You Gotta Know &mdash; a REBs Podcast</a>
+            <a href="../podcast/index.html">Girl, You Gotta Know &mdash; a REBs Podcast</a>
              <a href="#tally-open=wQ4dvY&amp;tally-layout=modal&amp;tally-emoji-animation=none">Become a member</a>
             <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>
-            <a href="privacy-policy/index.html">Privacy Policy</a>
+            <a href="../privacy-policy/index.html">Privacy Policy</a>
         </div>
         <div class="footer-column">
 
