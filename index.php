@@ -1,50 +1,73 @@
-    <?php include("inc/head.php"); ?>
+<?php include("../inc/head.php"); ?>
 
-<div class="container image-container">
-    <img class="cropped-image" src="images/take-action-hero.jpg">
-    <div class="hero-overlay"><h1 style="top:30px;" class="hero-headline">Every Action Counts.<br>
-    Together We Make<br> a Difference.</h1></div>
-</div>
+<div class="second-row">
+<strong>Privacy Policy</strong>
+<p>Effective Date: March 31, 2025</p>
 
-    <div class="second-row">
-        <p>If you are looking to fight back, delay, impede and ultimately extinguish the current administration, then you are in the right place. We believe <strong>the people ARE the United States</strong> – not the White House, not Capitol Hill, or any other federal building. Nor is it the people elected to represent us. At the end of the day, <strong>we rule</strong>, we are the United States, and it’s up to us to keep it that way. So, let’s get busy!</p>
-    </div>
-    
-<div class="third-row">
-    <div data-tally-open="wQ4dvY"
-         data-tally-layout="modal"
-         data-tally-emoji-animation="none" 
-         style="cursor:pointer;">
-
-        <h2>Become a Member</h2>
-        <p>Get on our mailing list and receive updates and calls to action directly in your inbox.</p>
-    </div>
-
-    <div onclick="location.href='events.php'">
-        <h2>Get Active</h2>
-        <p>Join a local REBs member meeting, attend a protest, write postcards, hang overpass bridge signs, and more.</p>
-    </div>
-    
-    <div data-tally-open="wQ4dvY"
-        data-tally-layout="modal"
-        data-tally-emoji-animation="none" 
-        style="cursor:pointer;">
-
-        <h2>Tools and Resources</h2>
-        <p>Each week we tell you who to call and what to say, we also provide links to help to know what’s what.</p>
-    </div>
-</div>
-    
-
-    <div style="padding: 0px 2em;">
-        <div class="quote">
-            <div class="qleft">&ldquo;</div>
-            <div class="qtext">If we do not change our direction, we are likely to end up where we are headed. <span style="white-space:nowrap; padding-left:1em;">– Lau Tzu</span> </div>
-            <div class="qright">&rdquo;</div>  
-        </div>
-    </div>    
-
-        
-    
-  <?php include("inc/footer.php"); ?>
-
+<p>Welcome to Rebs. Your privacy is important to us, and we are committed to protecting any personal information you provide. This Privacy Policy explains how we collect, use, and protect your information when you visit rebsct.com.
+</p>
+<p>
+<strong>1. Information We Collect</strong>
+When you use our "Contact Us" form, we may collect the following personal information:
+<ul>
+ 	<li>Name</li>
+ 	<li>Email Address</li>
+ 	<li>Phone Number (if provided)</li>
+ 	<li>Demographic Information (if provided)</li>
+ 	<li>Any other information you voluntarily submit</li>
+</ul>
+</p>
+<p>
+<strong>2. How We Use Your Information</strong>
+<ul>
+ 	<li>We use the information collected for the following purposes:</li>
+ 	<li>To respond to your inquiries or requests</li>
+ 	<li>To improve our website and services</li>
+ 	<li>To send relevant updates or communications (if you opt-in)</li>
+ 	<li>To comply with legal obligations</li>
+</ul>
+</p>
+<p>
+<strong>3. How We Protect Your Information</strong>
+We implement security measures to protect your personal data from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is completely secure.
+</p>
+<p>
+<strong>4. Sharing of Information</strong>
+We do not sell, trade, or share your personal information with third parties, except:
+<ul>
+ 	<li>When required by law or legal process</li>
+ 	<li>If necessary to protect our rights or comply with website policies</li>
+ 	<li>With trusted service providers who assist in website operations (under confidentiality agreements)</li>
+</ul>
+</p>
+<p>
+<strong>5. Cookies and Tracking Technologies</strong>
+We may use cookies and analytics tools to enhance your browsing experience. You can control cookie preferences in your browser settings.
+</p>
+<p>
+<strong>6. Your Rights and Choices</strong>
+You have the right to:
+<ul>
+ 	<li>Request access to the personal data we hold about you</li>
+ 	<li>Request corrections or deletion of your data</li>
+ 	<li>Opt out of communications at any time</li>
+</ul>
+To exercise these rights, please <a href="#tally-open=w2orMD&tally-layout=modal&tally-emoji-animation=none">Contact Us</a>.
+</p>
+<p>
+<strong>7. Third-Party Links</strong>
+Our website may contain links to third-party sites. We are not responsible for their privacy practices. Please review their policies before providing any information.
+</p>
+<p>
+<strong>8. Changes to This Privacy Policy</strong>
+We may update this policy from time to time. Any changes will be posted on this page with an updated effective date.
+</p>
+<p>
+<strong>9. Contact Us</strong>
+If you have any questions about this Privacy Policy, please <a href="#tally-open=w2orMD&tally-layout=modal&tally-emoji-animation=none">Contact Us</a>.
+</p>
+<p>
+By using our website, you consent to the terms of this Privacy Policy.
+</p>
+<p>&nbsp;</p>
+<?php include("../inc/footer.php"); ?>
