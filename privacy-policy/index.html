@@ -162,12 +162,13 @@
   z-index: 1;
   color: #ffffff;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
-  background: rgba(0, 0, 0, 0.2); 
+  background: rgba(0, 0, 0, 0.3); 
 }
 .hero-headline {
-    position:absolute;
-    top:25%;
-    left:40px;
+    display: flex;
+  justify-content: center;
+  align-items: center;    
+  height: 5em;          
 }
 
 /* hero image aspect ratio */
@@ -323,9 +324,12 @@ grid-template-columns: repeat(2, 1fr) !important;
 @media (max-width:768px) {
 
 h1 {font-size: 1.5em;}
-    .hero-headline {
-        margin-top:10px;
+
+/* Overlay hero text */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5); 
 }
+
 
 ul {
 grid-template-columns: 1fr !important;
@@ -424,8 +428,7 @@ padding-left: 15px;
     </script>
 
 
-<h1>Privacy Policy</h1>
-
+<p></p>
 <div class="second-row">
 <strong>Privacy Policy</strong>
 <p>Effective Date: March 31, 2025</p>
