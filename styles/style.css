@@ -149,24 +149,26 @@
  .quote {
     text-align: center;
     font-size: 2em;
-     font-family:'Noto Sans';
-     font-style: italic;
+    font-family:'Noto Sans';
+    font-style: italic;
 }
  .qleft{
     color:#33498e;
     text-align:left;
-     font-size: 7em;
+    font-size: 1.5em;
 }
  .qright {
     color:#33498e;
     text-align: right;
-     font-size: 7em;
-     line-height: .75em;
+     font-size: 1.5em;
 }
  .qtext {
-    margin-top:-4em;
-    padding:0px 3em;
+    margin-top:;
+    padding:2em 2em;
 }
+
+
+
 /* First Row */
  .first-row {
      display: flex;
@@ -274,17 +276,6 @@
     /* quotation */
      .quote {
         font-size: 1.5em;
-    }
-     .qleft{
-        font-size: 5em;
-    }
-     .qright {
-        font-size: 5em;
-         line-height: .75em;
-    }
-     .qtext {
-        margin-top:-4em;
-        padding:0px 3em;
     }
 }
  @media (max-width:768px) {

@@ -18,7 +18,7 @@
                 <li><a href="../who-we-are/index.html">Who We Are</a></li>
                 <li><a href="../our-mission/index.html">Our Mission</a></li>
                 <li><a href="../events/index.html">What We're Up To</a></li>
-                <li><a href="../tools/index.html">Tools & Resources</a></li>
+                <li><a href="index.html">Tools & Resources</a></li>
                 
             </ul>
         </div>
@@ -57,77 +57,105 @@
     </script>
 
 
-<p></p>
-<div class="second-row">
-<strong>Privacy Policy</strong>
-<p>Effective Date: March 31, 2025</p>
+<div class="container image-container">
+   <img class="cropped-image" src="../images/tools.jpg">
+   <div class="hero-overlay"><h1 class="hero-headline">Tools & Resources</h1></div>
+</div>
 
-<p>Welcome to Rebs. Your privacy is important to us, and we are committed to protecting any personal information you provide. This Privacy Policy explains how we collect, use, and protect your information when you visit rebsct.com.
-</p>
+
+
+
+
+
+<style type="text/css">.tab-container {
+   margin-top: 20px;
+   margin-left: 20px;
+   border-bottom: 3px solid #33498e;
+   margin-right:20px;
+}
+
+.tab-button {
+     padding: 9px 20px;
+     cursor: pointer;
+     border: none;
+     color: #333;
+     background-color: #a8c5e7;
+     margin-right: 10px;
+     border-top-left-radius: 5px;
+     border-top-right-radius: 5px;
+     font-family: "Montserrat", sans-serif;
+     font-weight: 600;
+     font-size: 1em;
+}
+
+.tab-button.active {
+  background-color: #33498e;
+  color: #fff;
+  padding-top:13px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+iframe {
+      margin: 10px; /* Add some space around the iframe */
+      width: 95%;
+      height: 700px;
+      border: 1px solid #ddd;         /* very light border for subtle framing */
+      border-radius: 4px;             /* slight rounding for a modern touch */
+      padding: 0;                     /* clean edges */
+      margin: 20px 0;                 /* breathing space */
+      box-sizing: border-box;
+}
+
+iframe:hover {
+  border-color: #ccc;             /* just a hint darker on hover */
+}
+
+</style>
+
+<script type="text/javascript">
+   function showTab(tabId) {
+  // Hide all tab contents
+  const tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(tab => tab.classList.remove('active'));
+
+  // Remove 'active' class from all buttons
+  const buttons = document.querySelectorAll('.tab-button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+
+  // Show the selected tab and activate the button
+  document.getElementById(tabId).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+</script>
+
+<div class="tab-container">
+  <button class="tab-button active" onclick="showTab('tab1')">Action Items</button>
+  <button class="tab-button" onclick="showTab('tab2')">Podcast</button>
+</div>
+
+<div id="tab1" class="tab-content active" style="text-align: center;">
+
+<iframe src="https://docs.google.com/document/d/e/2PACX-1vQEIGP7UwYrTiSCTHzjd73V6gxVOMShanod_8xiW_Fqe2JQAp5wcn_rxcFEmwqT0tKOfI5a9z83PmGL/pub?embedded=true"></iframe>
+
+</div>
+
+<div id="tab2" class="tab-content">
+<div class="second-row">
 <p>
-<strong>1. Information We Collect</strong>
-When you use our "Contact Us" form, we may collect the following personal information:
-<ul>
- 	<li>Name</li>
- 	<li>Email Address</li>
- 	<li>Phone Number (if provided)</li>
- 	<li>Demographic Information (if provided)</li>
- 	<li>Any other information you voluntarily submit</li>
-</ul>
-</p>
-<p>
-<strong>2. How We Use Your Information</strong>
-<ul>
- 	<li>We use the information collected for the following purposes:</li>
- 	<li>To respond to your inquiries or requests</li>
- 	<li>To improve our website and services</li>
- 	<li>To send relevant updates or communications (if you opt-in)</li>
- 	<li>To comply with legal obligations</li>
-</ul>
-</p>
-<p>
-<strong>3. How We Protect Your Information</strong>
-We implement security measures to protect your personal data from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is completely secure.
-</p>
-<p>
-<strong>4. Sharing of Information</strong>
-We do not sell, trade, or share your personal information with third parties, except:
-<ul>
- 	<li>When required by law or legal process</li>
- 	<li>If necessary to protect our rights or comply with website policies</li>
- 	<li>With trusted service providers who assist in website operations (under confidentiality agreements)</li>
-</ul>
-</p>
-<p>
-<strong>5. Cookies and Tracking Technologies</strong>
-We may use cookies and analytics tools to enhance your browsing experience. You can control cookie preferences in your browser settings.
-</p>
-<p>
-<strong>6. Your Rights and Choices</strong>
-You have the right to:
-<ul>
- 	<li>Request access to the personal data we hold about you</li>
- 	<li>Request corrections or deletion of your data</li>
- 	<li>Opt out of communications at any time</li>
-</ul>
-To exercise these rights, please <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>.
-</p>
-<p>
-<strong>7. Third-Party Links</strong>
-Our website may contain links to third-party sites. We are not responsible for their privacy practices. Please review their policies before providing any information.
-</p>
-<p>
-<strong>8. Changes to This Privacy Policy</strong>
-We may update this policy from time to time. Any changes will be posted on this page with an updated effective date.
-</p>
-<p>
-<strong>9. Contact Us</strong>
-If you have any questions about this Privacy Policy, please <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>.
-</p>
-<p>
-By using our website, you consent to the terms of this Privacy Policy.
+   <strong>Girl, YOU GOTTA KNOW</strong> is for you if you’re short on time, long on obligations and desperate to help the resistance but just don't know where to start.  Each week, hosts Celeste and Rorie will break down the pressing issues threatening our democracy and  provide 3- 4 simple and quick action steps you can take to make an impact. And best of all, they will do it in 10 minutes or less.  No muss.  No fuss. Just here to help you get it done!
 </p>
 </div>
+</div>
+
+
 <div>
   <img class="foot-topper" src="../images/crowd-footer.jpg" alt="silouette of crowd">
 </div>  
@@ -139,10 +167,10 @@ By using our website, you consent to the terms of this Privacy Policy.
           <a href="../events/index.html">Events</a>
         </div>
         <div class="footer-column">
-            <a href="../tools/index.html">Tools &amp; Resources</a>
+            <a href="index.html">Tools &amp; Resources</a>
              <a href="#tally-open=wQ4dvY&amp;tally-layout=modal&amp;tally-emoji-animation=none">Become a member</a>
             <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>
-            <a href="index.html">Privacy Policy</a>
+            <a href="../privacy-policy/index.html">Privacy Policy</a>
         </div>
         <div class="footer-column">
 

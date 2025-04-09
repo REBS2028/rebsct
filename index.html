@@ -18,7 +18,7 @@
                 <li><a href="who-we-are/index.html">Who We Are</a></li>
                 <li><a href="our-mission/index.html">Our Mission</a></li>
                 <li><a href="events/index.html">What We're Up To</a></li>
-                <li><a href="podcast/index.html">Podcast</a></li>
+                <li><a href="tools/index.html">Tools & Resources</a></li>
                 
             </ul>
         </div>
@@ -39,7 +39,7 @@
         <a href="who-we-are/index.html">Who We Are</a>
         <a href="our-mission/index.html">Our Mission</a>
         <a href="events/index.html">What We're Up To</a>
-        <a href="podcast/index.html">Podcast</a>
+        <a href="http://localhost:8888/rebsct-final/podcast/">Podcast</a>
          <div data-tally-open="wQ4dvY"
         data-tally-layout="modal"
         data-tally-emoji-animation="none" 
@@ -57,11 +57,67 @@
     </script>
 
 
+<!--
 <div class="container image-container">
     <img class="cropped-image" src="images/take-action-hero.jpg">
-    <div class="hero-overlay"><h1 class="hero-headline">Every Action Counts.<br>
-    Together We Make<br> a Difference.</h1></div>
+    <div class="hero-overlay"></div>
 </div>
+-->
+
+
+<style type="text/css">.hero-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 20 / 8; /* or 5 / 2 */
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;  /* Slightly bigger to allow zooming */
+  height: 110%;
+  background-image: url('images/take-action-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  animation: kenburns 20s ease-in-out ;
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding-top: 40vh;
+}
+
+/* Ken Burns Animation */
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.1) translate(-2%, -2%);
+  }
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+}
+</style>
+
+
+<div class="hero-container">
+  <div class="hero-image"></div>
+  <div class="hero-content">
+  </div>
+</div>
+
+
+<h1 style="color:#33498e; font-size: 2em; text-align: center;">Every Action Counts.
+    Together We Make a Difference.</h1>
+
 
     <div class="second-row">
         <p>If you are looking to fight back, delay, impede and ultimately extinguish the current administration, then you are in the right place. We believe <strong>the people ARE the United States</strong> – not the White House, not Capitol Hill, or any other federal building. Nor is it the people elected to represent us. At the end of the day, <strong>we rule</strong>, we are the United States, and it’s up to us to keep it that way. So, let’s get busy!</p>
@@ -77,28 +133,26 @@
         <p>Get on our mailing list and receive updates and calls to action directly in your inbox.</p>
     </div>
 
-    <div onclick="location.href='events.php'">
+    <div onclick="location.href='http://localhost:8888/rebsct-final/events/'">
         <h2>Get Active</h2>
         <p>Join a local REBs member meeting, attend a protest, write postcards, hang overpass bridge signs, and more.</p>
     </div>
     
-    <div data-tally-open="wQ4dvY"
-        data-tally-layout="modal"
-        data-tally-emoji-animation="none" 
-        style="cursor:pointer;">
-
+    <div onclick="location.href='http://localhost:8888/rebsct-final/tools/'">
         <h2>Tools and Resources</h2>
         <p>Each week we tell you who to call and what to say, we also provide links to help to know what’s what.</p>
     </div>
 </div>
     
 
-    <div style="padding: 0px 2em;">
+    <div>
         <div class="quote">
-            <div class="qleft">&ldquo;</div>
-            <div class="qtext">If we do not change our direction, we are likely to end up where we are headed.
-                <br><span style="white-space:nowrap; padding-left:1em;">– Lau Tzu</span> </div>
-            <div class="qright">&rdquo;</div>  
+            <div class="qtext">
+                <span class="qleft">&ldquo;</span>
+                If we do not change our direction, we are likely to end up where we are headed.
+                <span class="qright">&rdquo;</span>
+                <br><span style="white-space:nowrap; padding-left:1em;line-height: 2em;">– Lau Tzu</span>
+            </div>
         </div>
     </div>    
 
@@ -109,13 +163,13 @@
 </div>  
   <footer>
         <div class="footer-column">
-          <a href="index.html"> REBs &mdash; Home</a>
+          <a href="index.html">Home</a>
         <a href="who-we-are/index.html">Who We Are</a>
         <a href="our-mission/index.html">Our Mission</a>
           <a href="events/index.html">Events</a>
         </div>
         <div class="footer-column">
-            <a href="podcast/index.html">Girl, YOU GOTTA KNOW &mdash; a REBs Podcast</a>
+            <a href="tools/index.html">Tools &amp; Resources</a>
              <a href="#tally-open=wQ4dvY&amp;tally-layout=modal&amp;tally-emoji-animation=none">Become a member</a>
             <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>
             <a href="privacy-policy/index.html">Privacy Policy</a>
