@@ -143,13 +143,33 @@ iframe:hover {
 
 <div id="tab1" class="tab-content active" style="text-align: center;">
 
-<embed
-    src="../pdf/action-items.pdf#view=FitH"
-    type="application/pdf"
-    width="100%"
-    height="1000"
-    title="Embedded PDF Viewer"
-/>
+  <style>#pdf-embed {
+      width: 100%;
+      height: 600px;
+    }
+  </style>
+
+<div id="pdf-container">
+  <!-- The PDF will be embedded here if supported -->
+</div>
+
+<script>
+  // Basic mobile detection
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  const container = document.getElementById('pdf-container');
+  const pdfUrl = '../pdf/action-items.pdf#view=FitH'; // Replace with your actual PDF URL
+
+  if (!isMobile) {
+    container.innerHTML = `
+      <embed id="pdf-embed" src="${pdfUrl}" type="application/pdf">
+    `;
+  } else {
+    container.innerHTML = `
+      <p><a href="${pdfUrl}" target="_blank">Click here to view <br>or download the PDF.</a></p>
+    `;
+  }
+</script>
 
 </div>
 
