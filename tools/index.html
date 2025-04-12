@@ -149,16 +149,14 @@ iframe:hover {
     }
   </style>
 
-<div id="pdf-container">
-  <!-- The PDF will be embedded here if supported -->
-</div>
+<div id="pdf-container"></div>
 
 <script>
   // Basic mobile detection
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   const container = document.getElementById('pdf-container');
-  const pdfUrl = '../pdf/action-items.pdf#view=FitH'; // Replace with your actual PDF URL
+  const pdfUrl = '../pdf/action-items.pdf#view=FitH'; 
 
   if (!isMobile) {
     container.innerHTML = `
@@ -176,6 +174,7 @@ iframe:hover {
 <div id="tab2" class="tab-content">
 <div class="second-row">
 <p>
+  <img src="../images/gygk-logo-sm.png" style="float:left; width:100%; max-width: 500px; margin-right:15px;">
    <strong>Girl, YOU GOTTA KNOW</strong> is for you if you’re short on time, long on obligations and desperate to help the resistance but just don't know where to start.  Each week, hosts Celeste and Rorie will break down the pressing issues threatening our democracy and  provide 3- 4 simple and quick action steps you can take to make an impact. And best of all, they will do it in 10 minutes or less.  No muss.  No fuss. Just here to help you get it done!
 </p>
 </div>
