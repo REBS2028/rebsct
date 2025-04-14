@@ -191,24 +191,66 @@
 
                         const eventTime = document.createElement("div");
                         eventTime.classList.add("event-time");
-                        const eventStart = event.start.dateTime || event.start.date;
-                        const formattedDate = new Date(eventStart);
+                       
 
-                        if (!isNaN(formattedDate.getTime())) {
-                            const formattedTime = formattedDate.toLocaleString("en-US", {
-                                weekday: "long",
-                                year: "numeric",
-                                month: "long",
-                                day: "numeric",
-                                hour: "numeric",
-                                minute: "2-digit",
-                                hour12: true
-                            });
-                            eventTime.textContent = `${formattedTime}`;
-                        } else {
-                            eventTime.textContent = "No start time available";
-                        }
 
+
+
+let startTimeText = "";
+let endTimeText = "";
+let isAllDay = false;
+
+if (event.start.dateTime && event.end.dateTime) {
+    // Timed event
+    const start = new Date(event.start.dateTime);
+    const end = new Date(event.end.dateTime);
+
+    startTimeText = start.toLocaleString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+
+    endTimeText = end.toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true
+    });
+
+} else if (event.start.date && event.end.date) {
+    // All-day event
+    isAllDay = true;
+    const [startYear, startMonth, startDay] = event.start.date.split("-").map(Number);
+    const [endYear, endMonth, endDay] = event.end.date.split("-").map(Number);
+
+    const startDate = new Date(startYear, startMonth - 1, startDay);
+    const endDate = new Date(endYear, endMonth - 1, endDay - 1); // subtract 1 because all-day end is exclusive
+
+    startTimeText = startDate.toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    });
+
+    // Only show end date if it's not the same as the start date
+    if (startDate.getTime() !== endDate.getTime()) {
+        endTimeText = " to " + endDate.toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
+    } else {
+        endTimeText = " (All Day)";
+    }
+}
+
+eventTime.textContent = startTimeText + (endTimeText ? ` – ${endTimeText}` : "");
 
 
 const eventDescription = document.createElement("div");
