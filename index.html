@@ -20,9 +20,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wdth,wght@75,800&amp;display=swap" rel="stylesheet">
     <script async src="https://tally.so/widgets/embed.js"></script>
 
+.sticky-button {
+      position: fixed;
+      top: 30%;
+      right: 0;
+      background-color: #007BFF; /* Bootstrap blue */
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
 
+    .sticky-button:hover {
+      background-color: #FF4136; /* bright red */
+      color: white;
+    }
+    
 </head>
 <body>
+
+<a  class="sticky-button"
+    href="https://podcasts.apple.com/us/podcast/girl-you-gotta-know/id1811419484" 
+    target="_blank">
+    Listen on Apple Podcasts
+</a>
+    
     <nav class="nav">
         <a href="index.html" class="logo"><img src="images/logo-rebs.png" alt="Logo"></a>
         <div class="nav-container">
