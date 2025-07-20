@@ -91,7 +91,7 @@
 }
  .mobile-menu.active {
      display: flex;
-
+ }
 
 .sticky-button {
       position: fixed;
@@ -113,8 +113,6 @@
       color: white;
     }
     
-  
-}
  h1 {
      color: #ffffff;
      font-size: 3.5em;
