@@ -91,6 +91,29 @@
 }
  .mobile-menu.active {
      display: flex;
+
+
+.sticky-button {
+      position: fixed;
+      top: 30%;
+      right: 0;
+      background-color: #33498e; 
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: ;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .sticky-button:hover {
+      background-color: #d74a48;
+      color: white;
+    }
+    
+  
 }
  h1 {
      color: #ffffff;
