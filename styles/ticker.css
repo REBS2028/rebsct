@@ -1,0 +1,79 @@
+/* Container */
+.memorial-ticker-container {
+  width: 100%;
+  padding: 1rem 0;
+}
+
+/* Quiet label */
+.memorial-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+/* Ticker frame */
+.ticker-wrap {
+  width: 100%;
+  overflow: hidden;
+  background: #0b0b0b;
+  border-top: 1px solid #1f1f1f;
+  border-bottom: 1px solid #1f1f1f;
+
+  /* Soft fade edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+/* Scrolling line */
+.ticker {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: ticker-scroll 180s linear infinite;
+}
+
+/* Names */
+.ticker span {
+  font-family: "Arial", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  color: #e6e6e6;
+  padding: 0 2.5rem;
+}
+
+/* Divider as pause, not punctuation */
+.ticker span::after {
+  content: " † ";
+  opacity: 0.6;
+  margin-left: 2rem;
+}
+
+/* Pause on witness */
+.ticker-wrap:hover .ticker {
+  animation-play-state: paused;
+}
+
+/* Motion respect */
+@media (prefers-reduced-motion: reduce) {
+  .ticker {
+    animation: none;
+  }
+}
+
+/* Animation */
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
