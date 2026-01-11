@@ -51,7 +51,7 @@
 
 /* Divider as pause, not punctuation */
 .ticker span::after {
-  content: " † ";
+  content: " | ";
   opacity: 0.6;
   margin-left: 2rem;
 }
