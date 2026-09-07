@@ -16,7 +16,7 @@
               src="https://celeste422256.substack.com/embed"
               title="Subscribe to the REBs newsletter on Substack"
               width="480"
-              height="320"
+              height="150"
               frameborder="0"
               scrolling="no"
               loading="lazy"
