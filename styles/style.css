@@ -101,6 +101,7 @@
      color: black;
      font-size: 20px;
      width:100%;
+     box-sizing: border-box;
 }
  .mobile-menu.active {
      display: flex;
@@ -323,6 +324,84 @@
     /* Hover color */
 }
 
+/* Member signup modal */
+.member-signup-modal {
+    width: min(620px, calc(100% - 32px));
+    max-height: calc(100% - 32px);
+    padding: 0;
+    border: 0;
+    border-radius: 10px;
+    color: #222;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.member-signup-modal::backdrop {
+    background: rgba(8, 14, 34, 0.72);
+}
+
+.member-signup-shell {
+    position: relative;
+    padding: 48px 46px 38px;
+    text-align: center;
+    border-top: 8px solid #d74a48;
+}
+
+.member-signup-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #33498e;
+    cursor: pointer;
+    font: inherit;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.member-signup-close:hover,
+.member-signup-close:focus-visible {
+    color: #d12428;
+}
+
+.member-signup-eyebrow {
+    margin: 0 0 8px;
+    color: #d12428;
+    font-size: 0.68em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.member-signup-shell h2 {
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 8vw, 3.2rem);
+}
+
+.member-signup-copy {
+    max-width: 500px;
+    margin: 0 auto 28px;
+    line-height: 1.55;
+}
+
+.member-signup-embed {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.member-signup-embed iframe {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    height: 320px;
+    border: 1px solid #eee;
+    background: #fff;
+}
+
 
  @media (max-width: 1023px) {
      h1 {
@@ -396,4 +475,13 @@
          padding-top:30px;
          padding-bottom: 30px;
     }
+
+    .member-signup-shell {
+        padding: 42px 20px 28px;
+    }
+
+    .member-signup-copy {
+        margin-bottom: 22px;
+    }
+
 }
