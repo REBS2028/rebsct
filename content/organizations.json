@@ -1,0 +1,18 @@
+[
+  {
+    "id": "danbury-unites-for-immigrants",
+    "name": "Danbury Unites for Immigrants",
+    "bodyMarkdown": "ICE swept through Danbury, CT on the first day of school — abducting parents as soon as their children boarded their bus. Family members left behind struggle to buy basic necessities and need help navigating what comes next.\n\nDanbury Unites for Immigrants (DUFI) is there to help. Make a donation to help them do their work.",
+    "websiteUrl": "https://danburyunitesforimmigrants.org/",
+    "websiteLabel": "Learn more and donate",
+    "displayOrder": 10
+  },
+  {
+    "id": "each-step-home",
+    "name": "Each Step Home",
+    "bodyMarkdown": "Since 2025, ICE has detained over 6,200 children with their families in deplorable conditions. Each Step Home supports and protects these children and their families whose mental and physical wellbeing is being threatened by an inhumane immigration system.\n\nThey empower families by providing critical information and resources.",
+    "websiteUrl": "https://eachstephome.org/",
+    "websiteLabel": "Support their work and learn more",
+    "displayOrder": 20
+  }
+]

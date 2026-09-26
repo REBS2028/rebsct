@@ -1,0 +1,125 @@
+/* Styles for Take Action only. Shared navigation, footer, and signup remain in style.css. */
+body.take-action-page { color:#242d40; background:#fff; font:400 18px/1.6 'Montserrat',sans-serif; }
+.take-action-page main *, .take-action-page main *::before, .take-action-page main *::after { box-sizing:border-box; }
+.take-action-page main :is(h1,h2,h3,p,ol,ul) { margin:0; }
+.take-action-page main :is(h1,h2,h3) { text-transform:none; }
+.take-action-page main a { color:#33498e; text-underline-offset:4px; overflow-wrap:anywhere; }
+.take-action-page main button { cursor:pointer; font-family:inherit; }
+.take-action-page main strong { color:inherit; font-size:inherit; font-weight:650; font-style:normal; }
+.take-action-page [hidden] { display:none !important; }
+.take-action-page .nav { min-height:105px; line-height:normal; }
+.take-action-page .logo img { display:block; }
+.take-action-page .nav-links { align-items:center; }
+.take-action-page .hamburger { border:0; background:#fff; padding:7px; }
+.take-action-page .mobile-menu { position:static; padding:10px 0; border-bottom:1px solid #dfe4ec; }
+.take-action-page .skip-link { position:absolute; left:12px; top:-100px; z-index:1001; padding:10px 16px; background:#fff; color:#33498e; font-size:16px; }
+.take-action-page .skip-link:focus { top:10px; }
+.take-action-page .foot-topper { display:block; height:auto; }
+.take-action-page .footer-column { box-sizing:border-box; }
+.take-action-page footer { line-height:normal; }
+.action-hero { position:relative; width:100%; height:260px; overflow:hidden; }
+.action-hero > img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 52%; }
+.hero-copy { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:32px 40px; background:rgba(15,24,44,.54); text-align:center; color:#fff; }
+.take-action-page .hero-copy h1 { color:#fff; font:650 54px/1.12 'Montserrat',sans-serif; letter-spacing:-.04em; text-shadow:none; }
+.hero-copy p { color:#fff; font-size:17px; line-height:1.65; margin-top:15px !important; }
+.hero-copy p br { display:none; }
+.action-page-content { width:calc(100% - 80px); max-width:960px; margin:0 auto; padding:42px 0 48px; }
+.take-action-page main h2 { font:650 25px/1.3 'Montserrat',sans-serif; letter-spacing:-.035em; color:#242d40; }
+.current-actions > h2 { margin-bottom:20px !important; }
+.featured-action { background:#33498e; border-radius:12px; padding:34px; display:grid; grid-template-columns:minmax(0,1fr) 200px; gap:30px; align-items:start; color:#fff; scroll-margin-top:24px; }
+.featured-action.action-without-cta { grid-template-columns:1fr; }
+.feature-label { display:flex; align-items:center; gap:9px; color:#fff; font-size:12px; font-weight:550; margin-bottom:17px !important; }
+.feature-label::before { content:''; width:7px; height:7px; flex:none; border-radius:50%; background:#f69891; }
+.take-action-page .featured-action h3 { color:#fff; font:650 32px/1.2 'Montserrat',sans-serif; letter-spacing:-.035em; margin-bottom:17px; max-width:600px; overflow-wrap:anywhere; }
+.action-description { color:#e5eafb; font-size:16px; line-height:1.8; overflow-wrap:anywhere; }
+.action-description p + p, .action-description :is(ul,ol,blockquote,pre) { margin-top:14px !important; }
+.action-description :is(ul,ol) { padding-left:24px; }
+.action-description pre { white-space:pre-wrap; }
+.take-action-page .featured-action .action-description a { color:#fff; text-decoration:underline; }
+.feature-cta { display:flex; flex-direction:column; align-items:center; }
+.take-action-page .primary-action { display:inline-flex; gap:20px; align-items:center; justify-content:center; background:#fff; color:#33498e; border-radius:6px; padding:13px 18px; font-size:15px; line-height:1.4; text-decoration:none; font-weight:650; text-align:center; min-height:46px; }
+.primary-action span { flex:none; }
+.take-action-page .primary-action:hover { background:#e9eefb; }
+.other-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
+.other-action { min-width:0; padding:28px 28px 0 0; scroll-margin-top:24px; }
+.other-action:nth-child(even) { margin-top:28px; padding:0 0 0 28px; border-left:1px solid #dfe4ec; }
+.other-action:nth-child(n+3) { margin-top:28px; border-top:1px solid #dfe4ec; padding-top:28px; }
+.take-action-page .other-action h3 { font:600 20px/1.4 'Montserrat',sans-serif; letter-spacing:-.025em; color:#242d40; margin-bottom:10px; overflow-wrap:anywhere; }
+.other-action .action-description { color:#626b7c; font-size:15px; line-height:1.75; }
+.action-cta { margin-top:15px; }
+.text-action { display:inline-block; font-size:14px; font-weight:600; text-decoration:none; }
+.text-action:hover { text-decoration:underline; }
+.actions-empty-state { font-size:16px; color:#626b7c; }
+.take-action-page .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+.organizations-section { margin-top:46px; scroll-margin-top:24px; }
+.organizations-intro { font-size:15px; line-height:1.75; color:#626b7c; margin-top:8px !important; margin-bottom:20px !important; }
+.take-action-page .organization-list { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; column-gap:32px; list-style:none; padding:0; border-top:1px solid #dfe4ec; }
+.organization-list > li { min-width:0; border-bottom:1px solid #dfe4ec; }
+.organization-list > li:only-child { grid-column:1 / -1; }
+.organization { padding:22px 0 16px; scroll-margin-top:24px; }
+.take-action-page .organization h3 { font:600 19px/1.4 'Montserrat',sans-serif; color:#242d40; letter-spacing:-.02em; margin-bottom:10px; overflow-wrap:anywhere; }
+.organization-description { font-size:15px; line-height:1.75; color:#626b7c; max-width:70ch; overflow-wrap:anywhere; }
+.organization-description p + p, .organization-description :is(ul,ol,blockquote,pre) { margin-top:12px !important; }
+.organization-description :is(ul,ol) { padding-left:24px; }
+.organization-description pre { white-space:pre-wrap; }
+.organization-links { display:flex; flex-wrap:wrap; align-items:center; gap:4px 24px; margin-top:10px; }
+.organization-links a { display:inline-flex; align-items:center; gap:8px; font-size:13px; min-height:44px; text-decoration:none; }
+.organization-links .organization-donate { font-weight:600; }
+.organization-links a:hover { text-decoration:underline; }
+.calendar-section { margin-top:46px; scroll-margin-top:24px; }
+.calendar-heading { margin-bottom:20px; }
+.calendar-time-zone { color:#636b79; font-size:13px; line-height:1.6; margin-top:7px !important; }
+.take-action-page .event-list { list-style:none; padding:0; border-top:1px solid #dfe4ec; }
+.event { display:grid; grid-template-columns:64px minmax(0,1fr); gap:24px; border-bottom:1px solid #dfe4ec; padding:22px 0; }
+.event-date { display:flex; flex-direction:column; align-items:center; justify-content:center; width:64px; height:72px; background:#f0f3f9; border-radius:8px; color:#33498e; }
+.event-month { font-size:11px; letter-spacing:.09em; font-weight:600; text-transform:uppercase; }
+.event-day { font-size:29px; line-height:1.3; font-weight:600; letter-spacing:-.045em; }
+.event-copy { display:grid; grid-template-columns:minmax(0,1fr); gap:3px; align-items:start; min-width:0; }
+.event-meta { grid-column:1; font-size:12px; line-height:1.6; color:#636b79; }
+.take-action-page .event-title { grid-column:1; color:#242d40; font:600 19px/1.4 'Montserrat',sans-serif; letter-spacing:-.02em; overflow-wrap:anywhere; }
+.event-location { grid-column:1; color:#636b79; font-size:13px; line-height:1.6; overflow-wrap:anywhere; }
+.event-details { margin-top:10px; font-size:13px; line-height:1.7; min-width:0; }
+.event-description { max-width:700px; color:#4c5360; overflow-wrap:anywhere; white-space:pre-line; }
+.event-description :is(p,div,ul,ol,blockquote) + :is(p,div,ul,ol,blockquote) { margin-top:10px; }
+.event-description :is(ul,ol) { padding-left:24px; white-space:normal; }
+.more-events { display:block; margin:18px auto 0; border:1px solid #d5dce8; background:#fff; color:#33498e; border-radius:6px; font-size:14px; font-weight:550; padding:11px 20px; min-height:44px; }
+.more-events:hover { background:#f2f5fb; }
+.more-events:disabled { cursor:wait; opacity:.7; }
+.calendar-status { text-align:center; margin-top:18px !important; color:#636b79; font-size:13px; }
+.calendar-status:empty { display:none; }
+.calendar-status[role="alert"] { color:#9b3036; }
+.calendar-fallback { display:table; margin:18px auto 0; font-size:13px; }
+@media (min-width:1024px) {
+  .take-action-page .mobile-menu { display:none; }
+}
+@media (max-width:760px) {
+  .action-hero { height:230px; }
+  .hero-copy { padding:26px 20px; }
+  .take-action-page .hero-copy h1 { font-size:46px; }
+  .hero-copy p { font-size:16px; }
+  .action-page-content { width:calc(100% - 40px); padding-top:28px; }
+  .featured-action { grid-template-columns:1fr; padding:28px; }
+  .feature-cta { align-items:flex-start; }
+  .take-action-page .organization-list { grid-template-columns:1fr; }
+  .take-action-page .footer-column { padding:30px; }
+}
+@media (max-width:520px) {
+  .action-hero { height:210px; }
+  .take-action-page .hero-copy h1 { font-size:40px; }
+  .hero-copy p { max-width:260px; margin-top:13px !important; }
+  .hero-copy p br { display:block; }
+  .take-action-page main h2 { font-size:23px; }
+  .featured-action { padding:24px; border-radius:8px; gap:24px; }
+  .take-action-page .featured-action h3 { font-size:27px; }
+  .other-actions { display:block; }
+  .other-action, .other-action:nth-child(even) { margin:0; padding:24px 0; border-left:0; }
+  .other-action + .other-action { padding-top:24px; border-top:1px solid #dfe4ec; }
+  .event { grid-template-columns:53px minmax(0,1fr); gap:16px; }
+  .event-date { width:53px; height:65px; }
+  .take-action-page .event-title { font-size:17px; }
+  .event-meta, .event-location { font-size:12px; }
+  .calendar-section { margin-top:36px; }
+  .organizations-section { margin-top:36px; }
+  .take-action-page .organization h3 { font-size:18px; }
+  .take-action-page .footer-column { flex-basis:100%; }
+}

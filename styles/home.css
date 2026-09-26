@@ -1,0 +1,126 @@
+/* Homepage additions use the approved Take Action palette and typography. */
+body.home-page { background:#fff; color:#242d40; font:400 18px/1.6 'Montserrat',sans-serif; }
+.home-page [hidden] { display:none !important; }
+.home-page main *, .home-page main *::before, .home-page main *::after { box-sizing:border-box; }
+.home-page main :is(h1,h2,h3,p,ul) { margin:0; }
+.home-page main :is(h1,h2,h3) { font-family:'Montserrat',sans-serif; font-style:normal; text-transform:none; letter-spacing:-.035em; }
+.home-page main a { color:#33498e; text-underline-offset:4px; overflow-wrap:anywhere; }
+.home-page main strong { color:inherit; font-size:inherit; font-style:normal; font-weight:650; }
+.home-page .nav { min-height:105px; line-height:normal; }
+.home-page .logo img { display:block; }
+.home-page .nav-links { align-items:center; }
+.home-page .hamburger { border:0; background:#fff; padding:7px; }
+.home-page .mobile-menu { position:static; padding:10px 0; border-bottom:1px solid #dfe4ec; }
+.home-page .skip-link { position:absolute; left:12px; top:-100px; z-index:1001; padding:10px 16px; background:#fff; color:#33498e; font-size:16px; }
+.home-page .skip-link:focus { top:10px; }
+.home-page :focus-visible { outline:3px solid #d74a48; outline-offset:4px; }
+.home-page .foot-topper { display:block; height:auto; }
+.home-page .footer-column { box-sizing:border-box; }
+.home-page footer { line-height:normal; }
+.home-hero { height:280px; position:relative; overflow:hidden; }
+.home-hero > img { display:block; width:100%; height:100%; object-fit:cover; object-position:center 44%; }
+.home-hero-copy { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:30px 24px 50px; color:#fff; background:rgba(15,24,44,.54); text-align:center; }
+.home-page .home-hero h1 { color:#fff; font-size:54px; font-weight:650; line-height:1.12; letter-spacing:-.04em; }
+.home-page .home-hero p { margin-top:14px; color:#fff; font-size:19px; }
+.home-highlights { position:relative; z-index:1; display:grid; grid-template-columns:390px minmax(0,1fr); gap:22px; align-items:start; width:calc(100% - 80px); max-width:960px; margin:-48px auto 0; }
+.home-highlights:not(:has(.home-feature:not([hidden]))) { grid-template-columns:minmax(0,390px); justify-content:end; }
+.election-card { min-width:0; padding:20px 22px 14px; border:1px solid #e1e5ed; background:#fff; border-radius:10px; box-shadow:0 5px 22px rgba(27,39,70,.12); display:flex; flex-direction:column; justify-content:flex-start; }
+.election-countdown { display:flex; gap:16px; align-items:center; }
+.election-days { color:#33498e; font-size:57px; font-weight:600; letter-spacing:-.065em; line-height:1; font-variant-numeric:tabular-nums; }
+.election-label { font-size:11px; color:#626b7c; line-height:1.4; }
+.home-page .election-card h2 { color:#242d40; font-size:20px; font-weight:650; line-height:1.3; margin-top:1px; }
+.home-page .election-date { font-size:11px; color:#626b7c; line-height:1.5; margin-top:3px; }
+.home-page .early-voting { font-size:11px; color:#626b7c; margin-top:12px; border-top:1px solid #e6e9ef; padding-top:10px; }
+.early-voting strong { color:#3b4353 !important; font-weight:550 !important; }
+.early-voting > [aria-hidden] { padding:0 4px; }
+.election-links { display:flex; flex-wrap:wrap; gap:0 15px; margin-top:3px; font-size:11px; line-height:1.6; }
+.election-links a { display:inline-flex; align-items:center; gap:4px; min-height:32px; text-decoration:none; }
+.election-links a:hover { text-decoration:underline; }
+.home-feature { min-width:0; display:flex; flex-direction:column; justify-content:flex-start; gap:15px; background:#f3f5fa; border:1px solid #dce2ee; border-radius:10px; padding:20px 24px; box-shadow:0 5px 22px rgba(27,39,70,.08); }
+.home-page .home-feature-label { display:flex; align-items:center; gap:9px; color:#626b7c; font-size:11px; font-weight:550; margin-bottom:8px; }
+.home-feature-label::before { content:''; width:6px; height:6px; flex:none; border-radius:50%; background:#c86260; }
+.home-page .home-feature h2 { color:#33498e; font-size:21px; font-weight:600; line-height:1.3; margin-bottom:9px; }
+.home-feature h2 a { text-decoration:none; }
+.home-feature h2 a:hover { text-decoration:underline; }
+.home-feature-description { color:#626b7c; font-size:13px; line-height:1.7; }
+.home-feature-links { display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px; }
+.home-page .home-feature-cta { display:inline-flex; align-items:center; justify-content:center; gap:16px; background:#33498e; color:#fff; padding:9px 13px; min-height:44px; border-radius:5px; font-size:12px; line-height:1.5; font-weight:600; text-decoration:none; }
+.home-page .home-feature-cta:hover { background:#293e7b; }
+.home-more-actions { display:inline-flex; align-items:center; gap:5px; min-height:44px; font-size:12px; font-weight:500; text-decoration:none; }
+.home-more-actions:hover { text-decoration:underline; }
+.home-content { width:calc(100% - 80px); max-width:960px; margin:auto; padding:0 0 44px; }
+.home-memorial { position:relative; min-width:0; width:calc(100% - 80px); max-width:960px; margin:22px auto 0; }
+.memorial-heading { display:flex; align-items:baseline; flex-wrap:wrap; gap:2px 14px; padding:8px 0; }
+.home-page .memorial-heading h2 { color:#555e6d; font-size:13px; font-weight:550; line-height:1.5; letter-spacing:-.01em; }
+.memorial-heading p { color:#687080; font-size:11px; }
+.memorial-ticker-window { width:100%; margin:0; padding:0; overflow-x:auto; background:#0b0b0b; color:#e6e6e6; border-top:1px solid #1f1f1f; border-bottom:1px solid #1f1f1f; mask-image:linear-gradient(to right,transparent,#000 10%,#000 90%,transparent); }
+.memorial-ready .memorial-ticker-window { overflow:hidden; }
+.memorial-ready .memorial-ticker-window:focus-visible { overflow-x:auto; }
+.memorial-ticker-track { display:flex; width:max-content; }
+.memorial-ready .memorial-ticker-track { animation:memorial-scroll 1800s linear infinite; }
+.memorial-ticker-group { display:flex; flex-shrink:0; align-items:center; }
+.home-memorial:not(.memorial-ready) .memorial-ticker-group + .memorial-ticker-group { display:none; }
+.memorial-ticker-group span { color:#e6e6e6; font:400 1rem/1.6 Arial,sans-serif; letter-spacing:.02em; white-space:nowrap; }
+.memorial-ticker-group span::after { content:'|'; opacity:.6; margin:0 20px; }
+.memorial-ticker-window:hover .memorial-ticker-track { animation-play-state:paused; }
+.home-memorial .memorial-ticker-window:focus-visible .memorial-ticker-track { animation:none; }
+.memorial-ticker-window:focus-visible .memorial-ticker-group + .memorial-ticker-group { display:none; }
+.home-page .memorial-accessible-records { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; border:0; }
+.home-page .second-row { padding:36px 0 30px; font-size:17px; line-height:1.85; }
+.home-page .second-row p + p { margin-top:18px; }
+.home-page .second-row strong { color:#33498e; }
+.home-page .third-row { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); align-items:start; gap:0; width:100%; border-top:1px solid #dfe4ec; border-bottom:1px solid #dfe4ec; padding:26px 0; text-align:left; }
+.third-row > a { display:block; padding:0 24px; text-decoration:none; }
+.third-row > a:first-child { padding-left:0; }
+.third-row > a:last-child { padding-right:0; }
+.third-row > a + a { border-left:1px solid #dfe4ec; }
+.home-page .third-row h2 { font-size:19px; font-weight:600; line-height:1.4; margin-bottom:10px; }
+.home-page .third-row p { color:#626b7c; font-size:14px; line-height:1.8; }
+.third-row a:hover h2 { text-decoration:underline; }
+.home-page .quote { font-size:25px; margin-top:14px; }
+.home-page .qtext { padding:32px 20px 8px; }
+@keyframes memorial-scroll { to { transform:translateX(-50%); } }
+@media (min-width:1024px) { .home-page .mobile-menu { display:none; } }
+@media (max-width:860px) {
+  .home-highlights { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:16px; }
+  .election-card { padding:20px 18px 14px; }
+  .home-feature { padding:20px; }
+}
+@media (max-width:760px) {
+  .home-hero { height:250px; }
+  .home-page .home-hero h1 { font-size:44px; }
+  .home-page .home-hero p { font-size:17px; }
+  .home-highlights, .home-content { width:calc(100% - 40px); }
+  .home-memorial { width:100%; max-width:none; }
+  .memorial-heading { width:calc(100% - 40px); margin:auto; }
+  .home-highlights { margin-top:-34px; }
+  .home-page .footer-column { padding:30px; }
+}
+@media (max-width:650px) {
+  .home-highlights, .home-highlights:not(:has(.home-feature:not([hidden]))) { grid-template-columns:1fr; }
+  .home-feature { border-radius:8px; }
+  .memorial-heading { display:block; }
+  .home-page .second-row { font-size:16px; padding-top:28px; }
+  .home-page .third-row { display:block; padding:0; }
+  .third-row > a { padding:20px 0; }
+  .third-row > a + a { border-left:0; border-top:1px solid #dfe4ec; }
+  .home-page .quote { font-size:20px; }
+  .home-page .qtext { padding:24px 0 0; }
+}
+@media (max-width:520px) {
+  .home-hero { height:240px; }
+  .home-page .home-hero h1 { font-size:38px; }
+  .home-page .home-hero p { max-width:250px; font-size:16px; }
+  .home-highlights { margin-top:-25px; }
+  .election-card { padding:20px 18px 14px; border-radius:8px; }
+  .election-days { font-size:53px; }
+  .election-countdown { gap:13px; }
+  .home-page .election-card h2 { font-size:19px; }
+  .election-links a { min-height:44px; }
+  .home-feature { padding:20px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .home-memorial .memorial-ticker-track { animation:none; }
+  .home-memorial .memorial-ticker-window { overflow-x:auto; }
+  .memorial-ticker-group + .memorial-ticker-group { display:none; }
+}

@@ -1,0 +1,15 @@
+[
+  {
+    "id": "midterm-mixer",
+    "title": "REBs Midterm Mixer — October 4",
+    "bodyMarkdown": "**Voting is our superpower!** Join us from **noon–3 PM on October 4** at **Nod Hill Brewery, Ridgefield**, to celebrate our democracy, our freedom to vote, and each other.\n\nFood trucks, live music, voter registration, swag and more! Time spent in community inspires, energizes, and reminds us why showing up matters — especially heading into the midterm elections.",
+    "summary": "Noon–3 PM at Nod Hill Brewery, Ridgefield. Food trucks, live music, voter registration, and time together before the midterms.",
+    "cta": {
+      "label": "Register for the mixer",
+      "href": "https://www.mobilize.us/rebs/event/997937"
+    },
+    "displayOrder": 10,
+    "isFeatured": true,
+    "endDate": "2026-10-04"
+  }
+]

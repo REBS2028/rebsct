@@ -1,267 +1,143 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDWQCYQ3HT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RDWQCYQ3HT');
-</script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REBs – Moving Forward</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/ticker.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wdth,wght@75,800&amp;display=swap" rel="stylesheet">
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <script defer src="scripts/member-signup.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>REBs — Moving Forward</title>
+  <meta name="description" content="REBs — Moving Forward. Community action, events, and resources for Redding, Easton, Bethel, and our neighbors.">
+  <link rel="canonical" href="https://rebsct.com/">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wdth,wght@75,800&amp;display=swap" rel="stylesheet">
+  <script>
+    if (['rebsct.com', 'www.rebsct.com'].includes(location.hostname)) {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('js', new Date());
+      gtag('config', 'G-RDWQCYQ3HT');
+      const analytics = document.createElement('script');
+      analytics.async = true;
+      analytics.src = 'https://www.googletagmanager.com/gtag/js?id=G-RDWQCYQ3HT';
+      document.head.append(analytics);
+    }
+  </script>
+  <script async="" src="https://tally.so/widgets/embed.js"></script>
+  <script defer="" src="scripts/member-signup.js"></script>
+  <script type="module" src="scripts/home.js"></script>
 </head>
-<body>
-
-<!-- a  class="sticky-button"
-    href="https://podcasts.apple.com/us/podcast/girl-you-gotta-know/id1811419484" 
-    target="_blank">
-    Listen to our podcast <br>on Apple Podcasts
-</a -->
-    
-    <nav class="nav">
-        <a href="index.html" class="logo"><img src="images/logo-rebs.png" alt="Logo"></a>
+<body class="home-page">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<nav class="nav" aria-label="Main navigation">
+        <a href="index.html" class="logo"><img src="images/logo-rebs.png" alt="REBs — Moving Forward"></a>
         <div class="nav-container">
             <ul class="nav-links nav-links-small">
-                <li>✊ <a href="#member-signup" data-member-signup>
+                <li>✊ <a href="#member-signup" data-member-signup="">
         Become a Member</a></li>
             </ul>
             <ul class="nav-links">
                 <li><a href="who-we-are/index.html">Who We Are</a></li>
                 <li><a href="our-mission/index.html">Our Mission</a></li>
-                <li><a href="events/index.html">What We're Up To</a></li>
-                <li><a href="tools/index.html">Tools & Resources</a></li>
+                <li><a href="take-action/">Take Action</a></li>
+                <li><a href="tools/index.html">Tools &amp; Resources</a></li>
                 <li><a href="gallery/index.html">Gallery</a></li>
-                
             </ul>
         </div>
-        
-        <div class="hamburger" onclick="toggleMenu()">
+        <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-navigation">
             <div></div>
             <div></div>
             <div></div>
-        </div>
+        </button>
     </nav>
-
-    <div class="mobile-menu">
+<div class="mobile-menu" id="mobile-navigation">
         <a href="who-we-are/index.html">Who We Are</a>
         <a href="our-mission/index.html">Our Mission</a>
-        <a href="events/index.html">What We're Up To</a>
-        <a href="tools/index.html">Tools & Resources</a>
+        <a href="take-action/">Take Action</a>
+        <a href="tools/index.html">Tools &amp; Resources</a>
         <a href="gallery/index.html">Gallery</a>
-        <a href="#member-signup" data-member-signup>Become a Member</a>
+        <a href="#member-signup" data-member-signup="">Become a Member</a>
     </div>
-
-    <script>
-    function toggleMenu() {
-        const mobileMenu = document.querySelector(".mobile-menu");
-        const hamburger = document.querySelector(".hamburger");
-    
-        mobileMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-}
-    </script>
-
-
-<!--
-<div class="container image-container">
-    <img class="cropped-image" src="images/take-action-hero.jpg">
-    <div class="hero-overlay"></div>
-</div>
--->
-
-
-<style type="text/css">.hero-container {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 20 / 8; /* or 5 / 2 */
-  overflow: hidden;
-}
-
-.hero-image-kb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 110%;  /* Slightly bigger to allow zooming */
-  height: 110%;
-  background-image: url('images/take-action-hero-cropped.jpg');
-  background-size: cover;
-  background-position: center;
-  animation: kenburns 20s ease-in-out ;
-  z-index: 1;
-}
-
-/*
-.hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  padding-top: 40vh;
-}
-*/
-
-/* Ken Burns Animation */
-@keyframes kenburns {
-  0% {
-    transform: scale(1) translate(0, 0);
-  }
-  50% {
-    transform: scale(1.1) translate(-2%, -2%);
-  }
-  100% {
-    transform: scale(1) translate(0, 0);
-  }
-}
-</style>
-
-
-<div class="hero-container">
-  <div class="hero-image-kb"></div>
-  <div class="hero-content">
-  </div>
-</div>
-
-    <div class="memorial-ticker-container">
-  <div class="memorial-label">
-    DIED IN ICE &amp; CBP CUSTODY OR OPERATIONS – SAY THEIR NAMES
-  </div>
-
-  <div class="ticker-wrap">
-    <div class="ticker">       
-      <span>Genry Donaldo Ruiz-Guillen, 29, of Honduras, died in Larkin Hospital, Palm Springs, FL on January 23, 2025</span>
-      <span>Serawit Gezahegn Dejene, 45, of Ethiopia, died in Banner University Med Center, Phoenix, AZ on January 29, 2025</span>
-      <span>Maksym Chernyak, 44, of Ukraine, died in HCA Kendall Hospital, FL on February 20, 2025</span>
-      <span>Juan Alexis Tineo-Martinez, 44, of the Dominican Republic, died in Centro Medico Hospital, PR on February 23, 2025</span>
-      <span>Marlon Caceres-Mendoza, 22, of Honduras, died in Near Eagle Pass, TX on March 11, 2025</span>
-      <span>Ruben Ray Martinez, 23, of the United States, died in South Padre Island, TX on March 25, 2025</span>
-      <span>Brayan Rayo-Garzon, 27, of Colombia, died in Mercy South Hospital, MO on April 8, 2025</span>
-      <span>Nhon Ngoc Nguyen, 55, of Vietnam, died in Long Term Acute Care Hospital, TX on April 16, 2025</span>
-      <span>Marie Ange Blaise, 44, of Haiti, died in Broward Transitional Center, FL on April 25, 2025</span>
-      <span>Abelardo Avelleneda-Delgado, 68, of Mexico, died in In transit, Lowndes County, GA on May 5, 2025</span>
-      <span>Gabriela Solis-Perez, 19, of Mexico, died in El Paso, TX on May 18, 2025</span>
-      <span>Jesus Molina-Veya, 45, of Mexico, died in Phoebe Sumter Med Center, GA on June 7, 2025</span>
-      <span>Johnny Noviello, 49, of Canada, died in Federal Detention Center, Miami, FL on June 23, 2025</span>
-      <span>Isidro Perez, 75, of Cuba, died in HCA Kendall Hospital, FL on June 26, 2025</span>
-      <span>Tien Xuan Phan, 55, of Vietnam, died in Methodist Hospital Northeast, TX on July 19, 2025</span>
-      <span>Chaofeng Ge, 32, of China, died in Moshannon Valley ICE Center, PA on August 5, 2025</span>
-      <span>Lorenzo Antonio Batrez Vargas, 32, of Mexico, died in Central Arizona Florence Complex, AZ on August 31, 2025</span>
-      <span>Oscar Rascon Duarte, 58, of Mexico, died in Banner Desert Hospital, AZ on September 8, 2025</span>
-      <span>Silverio Villegas Gonzalez, 38, of Mexico, died in Franklin Park, IL on September 12, 2025</span>
-      <span>Unidentified Migrant, 30, of unknown origin, died in Near Jacumba, CA on November 4, 2025</span>
-      <span>Keith Porter Jr., 43, of the United States, died in Northridge, Los Angeles, CA on December 31, 2025</span>
-      <span>Geraldo Lunas Campos, 55, of Cuba, died in Camp East Montana, Ft. Bliss, TX on January 3, 2026</span>
-      <span>Luis Gustavo Nuñez Caceres, 42, of Honduras, died in HCA Healthcare, Conroe, TX on January 5, 2026</span>
-      <span>Luis Beltrán Yañez-Cruz, 68, of Honduras, died in John F. Kennedy Memorial Hospital, CA on January 6, 2026</span>
-      <span>Renee Nicole Macklin Good, 37, of the United States, died in Minneapolis, MN on January 7, 2026</span>
-      <span>Parady La, 46, of Cambodia, died in Thomas Jefferson Univ Hospital, PA on January 9, 2026</span>
-      <span>Victor Manuel Díaz, 36, of Nicaragua, died in Camp East Montana, El Paso, TX on January 14, 2026</span>
-      <span>Heber Sánchez Domínguez, 34, of Mexico, died in Robert A. Deyton Facility, GA on January 14, 2026</span>
-      <span>Alex Jeffrey Pretti, 37, of the United States, died in Minneapolis, MN on January 24, 2026</span>
-      <span>Lorenzo Salgado Araujo, 52, of Mexico, died in Houston, TX on July 7, 2026</span>
-      <span>Johan Sebastian Duran Guerrero, 25, of Colombia, died in Biddeford, ME on July 13, 2026</span>
-      <span>Santos Banegas Reyes, 42, of Honduras, died in Nassau Co., New York</span>
-      <span>Ismael Ayala-Uribe, 39, of Mexico, died in California</span>
-      <span>Norlan Guzman-Fuentes, 37, of El Salvador, died in Texas</span>
-      <span>Miguel Ángel García Medina, 31, of Mexico, was killed in Dallas, Texas</span>
-      <span>Huabing Xie, of China, died in Calexico, California</span>
-      <span>Leo Cruz-Silva, 34, of Mexico, committed suicide in ICE jail in Missouri</span>
-      <span>Hasan Ali Moh’D Saleh, 67, of Jordan, died in Florida</span>
-      <span>Josué Castro Rivera, 25, of Honduras, died in Virginia</span>
-      <span>Gabriel Garcia Aviles, 54, of Mexico, died in Adalanto, California</span>
-      <span>Kai Yin Wong, 63, of China, died in San Antonio, Texas</span>
-      <span>Francisco Gaspar-Andrés, 48, of Guatemala, died in El Paso, Texas</span>
-      <span>Pete Sumalo Montejo, 72, of the Philippines, died in Harlingen, Texas</span>
-      <span>Shiraz Fatehali Sachwani, 48, of Pakistan, died in Fort Worth, Texas</span>
-      <span>Jean Wilson Brutus, 41, of Haiti, died at Delaney Hall in Newark, New Jersey</span>
-      <span>Fouad Saeed Abdulkadir, 46, of Eritrea, died in Philipsburg, Pennsylvania</span>
-      <span>Delvin Francisco Rodriguez, 39, of Nicaragua, died in New Orleans</span>
-      <span>Nenko Stanev Gantchev, 56, of Bulgaria, died in Baldwin, Michigan</span>
-      <span>Alberto Gutierrez Reyes, died in ICE custody on February 27, 2026</span>
-      <span>Peyman Karshenas Najafabadi, died in ICE custody on March 1, 2026</span> 
-      <span>Emanual Cleeford Damas, died in ICE custody on died on March 2, 2026.</span> 
+<main id="main-content" tabindex="-1">
+  <header class="home-hero">
+    <img src="images/take-action-hero-cropped.jpg" alt="A person holding a sign that reads Time to Take Action" fetchpriority="high">
+    <div class="home-hero-copy"><h1>Every action counts.</h1><p>Together we make a difference.</p></div>
+  </header>
+  <div class="home-highlights">
+    <section class="election-card" data-election aria-labelledby="election-heading">
+    <div class="election-countdown">
+      <span class="election-days" data-election-days hidden></span>
+      <div><p class="election-label" data-election-label hidden></p><h2 id="election-heading">Election Day</h2>
+      <p class="election-date"><time datetime="2026-11-03">November 3, 2026</time></p></div>
     </div>
+    <p class="early-voting"><span data-early-voting-label>CT early voting</span> <span aria-hidden="true">·</span> <strong><time datetime="2026-10-19">Oct 19</time>–<time datetime="2026-11-01">Nov 1</time></strong></p>
+    <div class="election-links"><a href="https://portal.ct.gov/sots/election-services/voter-information/where-and-how-do-i-vote" target="_blank" rel="noopener noreferrer">Voting information <span aria-hidden="true">↗</span></a><a href="https://accountabilityscorecard.org/" target="_blank" rel="noopener noreferrer">Accountability Scorecard <span aria-hidden="true">↗</span></a></div>
+  </section>
+    <article class="home-feature" data-action data-action-end-date="2026-10-04" aria-labelledby="home-feature-heading">
+    <div><p class="home-feature-label">Featured action</p>
+    <h2 id="home-feature-heading"><a href="/take-action/#midterm-mixer">REBs Midterm Mixer — October 4</a></h2>
+    <p class="home-feature-description">Noon–3 PM at Nod Hill Brewery, Ridgefield. Food trucks, live music, voter registration, and time together before the midterms.</p></div>
+    <div class="home-feature-links">
+      <a class="home-feature-cta" href="https://www.mobilize.us/rebs/event/997937" target="_blank" rel="noopener noreferrer">Register for the mixer <span aria-hidden="true">↗</span></a>
+      <a class="home-more-actions" href="/take-action/#midterm-mixer">More on Take Action <span aria-hidden="true">→</span></a>
+    </div>
+  </article>
   </div>
-</div>
-
-
-<h1 style="color:#33498e; font-size: 2em; text-align: center;">Every Action Counts.
-    Together We Make a Difference.</h1>
-
-
-<!-- div class="second-row">
-        <p>If you are looking to fight back, delay, impede and ultimately extinguish the current administration, then you are in the right place. We believe <strong>the people ARE the United States</strong> – not the White House, not Capitol Hill, or any other federal building. Nor is it the people elected to represent us. At the end of the day, <strong>we rule</strong>, we are the United States, and it’s up to us to keep it that way. So, let’s get busy!</p>
-    </div -->
-
-<div class="second-row">
+  <section class="home-memorial" aria-labelledby="memorial-heading">
+    <div class="memorial-heading"><h2 id="memorial-heading">Say their names.</h2><p>Died in ICE &amp; CBP custody or operations</p></div>
+    <div class="memorial-ticker-window" tabindex="0" role="region" aria-label="Memorial ticker"><div class="memorial-ticker-track" aria-hidden="true"><div class="memorial-ticker-group"><span>Genry Donaldo Ruiz-Guillen, 29, of Honduras, died in Larkin Hospital, Palm Springs, FL on January 23, 2025</span><span>Serawit Gezahegn Dejene, 45, of Ethiopia, died in Banner University Med Center, Phoenix, AZ on January 29, 2025</span><span>Maksym Chernyak, 44, of Ukraine, died in HCA Kendall Hospital, FL on February 20, 2025</span><span>Juan Alexis Tineo-Martinez, 44, of the Dominican Republic, died in Centro Medico Hospital, PR on February 23, 2025</span><span>Marlon Caceres-Mendoza, 22, of Honduras, died in Near Eagle Pass, TX on March 11, 2025</span><span>Ruben Ray Martinez, 23, of the United States, died in South Padre Island, TX on March 25, 2025</span><span>Brayan Rayo-Garzon, 27, of Colombia, died in Mercy South Hospital, MO on April 8, 2025</span><span>Nhon Ngoc Nguyen, 55, of Vietnam, died in Long Term Acute Care Hospital, TX on April 16, 2025</span><span>Marie Ange Blaise, 44, of Haiti, died in Broward Transitional Center, FL on April 25, 2025</span><span>Abelardo Avelleneda-Delgado, 68, of Mexico, died in In transit, Lowndes County, GA on May 5, 2025</span><span>Gabriela Solis-Perez, 19, of Mexico, died in El Paso, TX on May 18, 2025</span><span>Jesus Molina-Veya, 45, of Mexico, died in Phoebe Sumter Med Center, GA on June 7, 2025</span><span>Johnny Noviello, 49, of Canada, died in Federal Detention Center, Miami, FL on June 23, 2025</span><span>Isidro Perez, 75, of Cuba, died in HCA Kendall Hospital, FL on June 26, 2025</span><span>Tien Xuan Phan, 55, of Vietnam, died in Methodist Hospital Northeast, TX on July 19, 2025</span><span>Chaofeng Ge, 32, of China, died in Moshannon Valley ICE Center, PA on August 5, 2025</span><span>Lorenzo Antonio Batrez Vargas, 32, of Mexico, died in Central Arizona Florence Complex, AZ on August 31, 2025</span><span>Oscar Rascon Duarte, 58, of Mexico, died in Banner Desert Hospital, AZ on September 8, 2025</span><span>Silverio Villegas Gonzalez, 38, of Mexico, died in Franklin Park, IL on September 12, 2025</span><span>Unidentified Migrant, 30, of unknown origin, died in Near Jacumba, CA on November 4, 2025</span><span>Keith Porter Jr., 43, of the United States, died in Northridge, Los Angeles, CA on December 31, 2025</span><span>Geraldo Lunas Campos, 55, of Cuba, died in Camp East Montana, Ft. Bliss, TX on January 3, 2026</span><span>Luis Gustavo Nuñez Caceres, 42, of Honduras, died in HCA Healthcare, Conroe, TX on January 5, 2026</span><span>Luis Beltrán Yañez-Cruz, 68, of Honduras, died in John F. Kennedy Memorial Hospital, CA on January 6, 2026</span><span>Renee Nicole Macklin Good, 37, of the United States, died in Minneapolis, MN on January 7, 2026</span><span>Parady La, 46, of Cambodia, died in Thomas Jefferson Univ Hospital, PA on January 9, 2026</span><span>Victor Manuel Díaz, 36, of Nicaragua, died in Camp East Montana, El Paso, TX on January 14, 2026</span><span>Heber Sánchez Domínguez, 34, of Mexico, died in Robert A. Deyton Facility, GA on January 14, 2026</span><span>Alex Jeffrey Pretti, 37, of the United States, died in Minneapolis, MN on January 24, 2026</span><span>Lorenzo Salgado Araujo, 52, of Mexico, died in Houston, TX on July 7, 2026</span><span>Johan Sebastian Duran Guerrero, 25, of Colombia, died in Biddeford, ME on July 13, 2026</span><span>Santos Banegas Reyes, 42, of Honduras, died in Nassau Co., New York</span><span>Ismael Ayala-Uribe, 39, of Mexico, died in California</span><span>Norlan Guzman-Fuentes, 37, of El Salvador, died in Texas</span><span>Miguel Ángel García Medina, 31, of Mexico, was killed in Dallas, Texas</span><span>Huabing Xie, of China, died in Calexico, California</span><span>Leo Cruz-Silva, 34, of Mexico, committed suicide in ICE jail in Missouri</span><span>Hasan Ali Moh’D Saleh, 67, of Jordan, died in Florida</span><span>Josué Castro Rivera, 25, of Honduras, died in Virginia</span><span>Gabriel Garcia Aviles, 54, of Mexico, died in Adalanto, California</span><span>Kai Yin Wong, 63, of China, died in San Antonio, Texas</span><span>Francisco Gaspar-Andrés, 48, of Guatemala, died in El Paso, Texas</span><span>Pete Sumalo Montejo, 72, of the Philippines, died in Harlingen, Texas</span><span>Shiraz Fatehali Sachwani, 48, of Pakistan, died in Fort Worth, Texas</span><span>Jean Wilson Brutus, 41, of Haiti, died at Delaney Hall in Newark, New Jersey</span><span>Fouad Saeed Abdulkadir, 46, of Eritrea, died in Philipsburg, Pennsylvania</span><span>Delvin Francisco Rodriguez, 39, of Nicaragua, died in New Orleans</span><span>Nenko Stanev Gantchev, 56, of Bulgaria, died in Baldwin, Michigan</span><span>Alberto Gutierrez Reyes, died in ICE custody on February 27, 2026</span><span>Peyman Karshenas Najafabadi, died in ICE custody on March 1, 2026</span><span>Emanual Cleeford Damas, died in ICE custody on died on March 2, 2026.</span></div><div class="memorial-ticker-group"><span>Genry Donaldo Ruiz-Guillen, 29, of Honduras, died in Larkin Hospital, Palm Springs, FL on January 23, 2025</span><span>Serawit Gezahegn Dejene, 45, of Ethiopia, died in Banner University Med Center, Phoenix, AZ on January 29, 2025</span><span>Maksym Chernyak, 44, of Ukraine, died in HCA Kendall Hospital, FL on February 20, 2025</span><span>Juan Alexis Tineo-Martinez, 44, of the Dominican Republic, died in Centro Medico Hospital, PR on February 23, 2025</span><span>Marlon Caceres-Mendoza, 22, of Honduras, died in Near Eagle Pass, TX on March 11, 2025</span><span>Ruben Ray Martinez, 23, of the United States, died in South Padre Island, TX on March 25, 2025</span><span>Brayan Rayo-Garzon, 27, of Colombia, died in Mercy South Hospital, MO on April 8, 2025</span><span>Nhon Ngoc Nguyen, 55, of Vietnam, died in Long Term Acute Care Hospital, TX on April 16, 2025</span><span>Marie Ange Blaise, 44, of Haiti, died in Broward Transitional Center, FL on April 25, 2025</span><span>Abelardo Avelleneda-Delgado, 68, of Mexico, died in In transit, Lowndes County, GA on May 5, 2025</span><span>Gabriela Solis-Perez, 19, of Mexico, died in El Paso, TX on May 18, 2025</span><span>Jesus Molina-Veya, 45, of Mexico, died in Phoebe Sumter Med Center, GA on June 7, 2025</span><span>Johnny Noviello, 49, of Canada, died in Federal Detention Center, Miami, FL on June 23, 2025</span><span>Isidro Perez, 75, of Cuba, died in HCA Kendall Hospital, FL on June 26, 2025</span><span>Tien Xuan Phan, 55, of Vietnam, died in Methodist Hospital Northeast, TX on July 19, 2025</span><span>Chaofeng Ge, 32, of China, died in Moshannon Valley ICE Center, PA on August 5, 2025</span><span>Lorenzo Antonio Batrez Vargas, 32, of Mexico, died in Central Arizona Florence Complex, AZ on August 31, 2025</span><span>Oscar Rascon Duarte, 58, of Mexico, died in Banner Desert Hospital, AZ on September 8, 2025</span><span>Silverio Villegas Gonzalez, 38, of Mexico, died in Franklin Park, IL on September 12, 2025</span><span>Unidentified Migrant, 30, of unknown origin, died in Near Jacumba, CA on November 4, 2025</span><span>Keith Porter Jr., 43, of the United States, died in Northridge, Los Angeles, CA on December 31, 2025</span><span>Geraldo Lunas Campos, 55, of Cuba, died in Camp East Montana, Ft. Bliss, TX on January 3, 2026</span><span>Luis Gustavo Nuñez Caceres, 42, of Honduras, died in HCA Healthcare, Conroe, TX on January 5, 2026</span><span>Luis Beltrán Yañez-Cruz, 68, of Honduras, died in John F. Kennedy Memorial Hospital, CA on January 6, 2026</span><span>Renee Nicole Macklin Good, 37, of the United States, died in Minneapolis, MN on January 7, 2026</span><span>Parady La, 46, of Cambodia, died in Thomas Jefferson Univ Hospital, PA on January 9, 2026</span><span>Victor Manuel Díaz, 36, of Nicaragua, died in Camp East Montana, El Paso, TX on January 14, 2026</span><span>Heber Sánchez Domínguez, 34, of Mexico, died in Robert A. Deyton Facility, GA on January 14, 2026</span><span>Alex Jeffrey Pretti, 37, of the United States, died in Minneapolis, MN on January 24, 2026</span><span>Lorenzo Salgado Araujo, 52, of Mexico, died in Houston, TX on July 7, 2026</span><span>Johan Sebastian Duran Guerrero, 25, of Colombia, died in Biddeford, ME on July 13, 2026</span><span>Santos Banegas Reyes, 42, of Honduras, died in Nassau Co., New York</span><span>Ismael Ayala-Uribe, 39, of Mexico, died in California</span><span>Norlan Guzman-Fuentes, 37, of El Salvador, died in Texas</span><span>Miguel Ángel García Medina, 31, of Mexico, was killed in Dallas, Texas</span><span>Huabing Xie, of China, died in Calexico, California</span><span>Leo Cruz-Silva, 34, of Mexico, committed suicide in ICE jail in Missouri</span><span>Hasan Ali Moh’D Saleh, 67, of Jordan, died in Florida</span><span>Josué Castro Rivera, 25, of Honduras, died in Virginia</span><span>Gabriel Garcia Aviles, 54, of Mexico, died in Adalanto, California</span><span>Kai Yin Wong, 63, of China, died in San Antonio, Texas</span><span>Francisco Gaspar-Andrés, 48, of Guatemala, died in El Paso, Texas</span><span>Pete Sumalo Montejo, 72, of the Philippines, died in Harlingen, Texas</span><span>Shiraz Fatehali Sachwani, 48, of Pakistan, died in Fort Worth, Texas</span><span>Jean Wilson Brutus, 41, of Haiti, died at Delaney Hall in Newark, New Jersey</span><span>Fouad Saeed Abdulkadir, 46, of Eritrea, died in Philipsburg, Pennsylvania</span><span>Delvin Francisco Rodriguez, 39, of Nicaragua, died in New Orleans</span><span>Nenko Stanev Gantchev, 56, of Bulgaria, died in Baldwin, Michigan</span><span>Alberto Gutierrez Reyes, died in ICE custody on February 27, 2026</span><span>Peyman Karshenas Najafabadi, died in ICE custody on March 1, 2026</span><span>Emanual Cleeford Damas, died in ICE custody on died on March 2, 2026.</span></div></div></div>
+    <ul class="memorial-accessible-records"><li>Genry Donaldo Ruiz-Guillen, 29, of Honduras, died in Larkin Hospital, Palm Springs, FL on January 23, 2025</li><li>Serawit Gezahegn Dejene, 45, of Ethiopia, died in Banner University Med Center, Phoenix, AZ on January 29, 2025</li><li>Maksym Chernyak, 44, of Ukraine, died in HCA Kendall Hospital, FL on February 20, 2025</li><li>Juan Alexis Tineo-Martinez, 44, of the Dominican Republic, died in Centro Medico Hospital, PR on February 23, 2025</li><li>Marlon Caceres-Mendoza, 22, of Honduras, died in Near Eagle Pass, TX on March 11, 2025</li><li>Ruben Ray Martinez, 23, of the United States, died in South Padre Island, TX on March 25, 2025</li><li>Brayan Rayo-Garzon, 27, of Colombia, died in Mercy South Hospital, MO on April 8, 2025</li><li>Nhon Ngoc Nguyen, 55, of Vietnam, died in Long Term Acute Care Hospital, TX on April 16, 2025</li><li>Marie Ange Blaise, 44, of Haiti, died in Broward Transitional Center, FL on April 25, 2025</li><li>Abelardo Avelleneda-Delgado, 68, of Mexico, died in In transit, Lowndes County, GA on May 5, 2025</li><li>Gabriela Solis-Perez, 19, of Mexico, died in El Paso, TX on May 18, 2025</li><li>Jesus Molina-Veya, 45, of Mexico, died in Phoebe Sumter Med Center, GA on June 7, 2025</li><li>Johnny Noviello, 49, of Canada, died in Federal Detention Center, Miami, FL on June 23, 2025</li><li>Isidro Perez, 75, of Cuba, died in HCA Kendall Hospital, FL on June 26, 2025</li><li>Tien Xuan Phan, 55, of Vietnam, died in Methodist Hospital Northeast, TX on July 19, 2025</li><li>Chaofeng Ge, 32, of China, died in Moshannon Valley ICE Center, PA on August 5, 2025</li><li>Lorenzo Antonio Batrez Vargas, 32, of Mexico, died in Central Arizona Florence Complex, AZ on August 31, 2025</li><li>Oscar Rascon Duarte, 58, of Mexico, died in Banner Desert Hospital, AZ on September 8, 2025</li><li>Silverio Villegas Gonzalez, 38, of Mexico, died in Franklin Park, IL on September 12, 2025</li><li>Unidentified Migrant, 30, of unknown origin, died in Near Jacumba, CA on November 4, 2025</li><li>Keith Porter Jr., 43, of the United States, died in Northridge, Los Angeles, CA on December 31, 2025</li><li>Geraldo Lunas Campos, 55, of Cuba, died in Camp East Montana, Ft. Bliss, TX on January 3, 2026</li><li>Luis Gustavo Nuñez Caceres, 42, of Honduras, died in HCA Healthcare, Conroe, TX on January 5, 2026</li><li>Luis Beltrán Yañez-Cruz, 68, of Honduras, died in John F. Kennedy Memorial Hospital, CA on January 6, 2026</li><li>Renee Nicole Macklin Good, 37, of the United States, died in Minneapolis, MN on January 7, 2026</li><li>Parady La, 46, of Cambodia, died in Thomas Jefferson Univ Hospital, PA on January 9, 2026</li><li>Victor Manuel Díaz, 36, of Nicaragua, died in Camp East Montana, El Paso, TX on January 14, 2026</li><li>Heber Sánchez Domínguez, 34, of Mexico, died in Robert A. Deyton Facility, GA on January 14, 2026</li><li>Alex Jeffrey Pretti, 37, of the United States, died in Minneapolis, MN on January 24, 2026</li><li>Lorenzo Salgado Araujo, 52, of Mexico, died in Houston, TX on July 7, 2026</li><li>Johan Sebastian Duran Guerrero, 25, of Colombia, died in Biddeford, ME on July 13, 2026</li><li>Santos Banegas Reyes, 42, of Honduras, died in Nassau Co., New York</li><li>Ismael Ayala-Uribe, 39, of Mexico, died in California</li><li>Norlan Guzman-Fuentes, 37, of El Salvador, died in Texas</li><li>Miguel Ángel García Medina, 31, of Mexico, was killed in Dallas, Texas</li><li>Huabing Xie, of China, died in Calexico, California</li><li>Leo Cruz-Silva, 34, of Mexico, committed suicide in ICE jail in Missouri</li><li>Hasan Ali Moh’D Saleh, 67, of Jordan, died in Florida</li><li>Josué Castro Rivera, 25, of Honduras, died in Virginia</li><li>Gabriel Garcia Aviles, 54, of Mexico, died in Adalanto, California</li><li>Kai Yin Wong, 63, of China, died in San Antonio, Texas</li><li>Francisco Gaspar-Andrés, 48, of Guatemala, died in El Paso, Texas</li><li>Pete Sumalo Montejo, 72, of the Philippines, died in Harlingen, Texas</li><li>Shiraz Fatehali Sachwani, 48, of Pakistan, died in Fort Worth, Texas</li><li>Jean Wilson Brutus, 41, of Haiti, died at Delaney Hall in Newark, New Jersey</li><li>Fouad Saeed Abdulkadir, 46, of Eritrea, died in Philipsburg, Pennsylvania</li><li>Delvin Francisco Rodriguez, 39, of Nicaragua, died in New Orleans</li><li>Nenko Stanev Gantchev, 56, of Bulgaria, died in Baldwin, Michigan</li><li>Alberto Gutierrez Reyes, died in ICE custody on February 27, 2026</li><li>Peyman Karshenas Najafabadi, died in ICE custody on March 1, 2026</li><li>Emanual Cleeford Damas, died in ICE custody on died on March 2, 2026.</li></ul>
+  </section>
+  <div class="home-content">
+    <div class="second-row">
     <p>
-        If you’re waking up week after week dreading the barrage of daily horrors coming from the American government, then you &mdash; like us &mdash; are probably wondering what you can do to help restore democracy to our beloved country.  It is our belief that <strong>We the People ARE the United States</strong>.  It's not the people in the White House, on Capitol Hill, or any other federal building. 
+        If you’re waking up week after week dreading the barrage of daily horrors coming from the American government, then you — like us — are probably wondering what you can do to help restore democracy to our beloved country.  It is our belief that <strong>We the People ARE the United States</strong>.  It's not the people in the White House, on Capitol Hill, or any other federal building.
     </p>
     <p>
-        We have a process whereby we elect representatives to bring our ideas and viewpoints to Congress.  As such, <strong>We the People</strong> are in charge of the United States and it’s our responsibility to commit ourselves to see that this privilege does not get obliterated by the current administration. 
+        We have a process whereby we elect representatives to bring our ideas and viewpoints to Congress.  As such, <strong>We the People</strong> are in charge of the United States and it’s our responsibility to commit ourselves to see that this privilege does not get obliterated by the current administration.
     </p>
     <p>
         So, let’s get busy TOGETHER!
     </p>
 </div>
-    
-<div class="third-row">
-    <div data-member-signup role="button" tabindex="0">
+    <div class="third-row">
+    <a href="#member-signup" data-member-signup="">
 
         <h2>Become a Member</h2>
         <p>Get on our mailing list and receive updates and calls to action directly in your inbox.</p>
-    </div>
+    </a>
 
-    <div onclick="location.href='events/'">
-        <h2>Get Active</h2>
+    <a href="take-action/">
+        <h2>Take Action</h2>
         <p>Join a local REBs member meeting, attend a protest, write postcards, hang overpass bridge signs, and more.</p>
-    </div>
-    
-    <div onclick="location.href='tools/'">
+    </a>
+
+    <a href="tools/">
         <h2>Tools and Resources</h2>
         <p>Each week we tell you who to call and what to say, we also provide links to help to know what’s what.</p>
-    </div>
+    </a>
 </div>
-    
-
-    <div>
-        <div class="quote">
+    <div class="quote">
             <div class="qtext">
-                <span class="qleft">&ldquo;</span>
+                <span class="qleft">“</span>
                 If we do not change our direction, we are likely to end up where we are headed.
-                <span class="qright">&rdquo;</span>
+                <span class="qright">”</span>
                 <br><span style="white-space:nowrap; padding-left:1em;line-height: 2em;">– Lau Tzu</span>
             </div>
         </div>
-    </div>    
-
-
-    
-  <div>
-  <img class="foot-topper" src="images/crowd-footer.jpg" alt="silouette of crowd">
-</div>  
-  <footer>
+  </div>
+</main>
+<img class="foot-topper" src="images/crowd-footer.jpg" alt="Silhouette of a crowd holding signs" loading="lazy">
+<footer>
         <div class="footer-column">
           <a href="index.html">Home</a>
         <a href="who-we-are/index.html">Who We Are</a>
         <a href="our-mission/index.html">Our Mission</a>
-          <a href="events/index.html">Events</a>
+          <a href="take-action/">Take Action</a>
         </div>
         <div class="footer-column">
             <a href="tools/index.html">Tools &amp; Resources</a>
-             <a href="#member-signup" data-member-signup>Become a member</a>
+             <a href="#member-signup" data-member-signup="">Become a member</a>
             <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>
             <a href="privacy-policy/index.html">Privacy Policy</a>
         </div>
@@ -270,14 +146,13 @@
 <p>
 <a href="https://bsky.app/profile/rebs-movingforward.bsky.social"><svg class="social-icon" width="60" height="53" viewBox="0 0 600 530" xmlns="http://www.w3.org/2000/svg">
   <title>Bluesky</title>
-  <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"/>
+  <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z" fill="currentColor"></path>
 </svg>
 </a>
 
 </p>
-        
+
         </div>
     </footer>
-    
 </body>
 </html>
