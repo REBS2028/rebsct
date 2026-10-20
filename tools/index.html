@@ -1,153 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDWQCYQ3HT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RDWQCYQ3HT');
-</script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REBs – Moving Forward</title>
-    <link rel="stylesheet" href="../styles/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wdth,wght@75,800&amp;display=swap" rel="stylesheet">
-    <script async src="https://tally.so/widgets/embed.js"></script>
-    <script defer src="../scripts/member-signup.js"></script>
-
-<style>
-  .under-construction {
-    background: #f2f6fb;
-    padding: clamp(48px, 8vw, 96px) 20px;
-  }
-
-  .under-construction-card {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: clamp(36px, 7vw, 72px) clamp(24px, 6vw, 64px);
-    text-align: center;
-    background: #fff;
-    border: 1px solid #a8c5e7;
-    border-top: 8px solid #d74a48;
-    border-radius: 8px;
-    box-shadow: 0 16px 40px rgba(51, 73, 142, 0.12);
-  }
-
-  .under-construction-label {
-    margin: 0 0 10px;
-    color: #d12428;
-    font-size: 0.72em;
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
-  .under-construction-card h2 {
-    margin: 0 0 16px;
-    font-size: clamp(2rem, 6vw, 3.5rem);
-  }
-
-  .under-construction-card p:last-child {
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 600px) {
-    .under-construction {
-      padding: 32px 16px;
-    }
-
-    .under-construction-card {
-      padding: 36px 20px;
-    }
-  }
-</style>
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tools & Resources | REBs — Moving Forward</title>
+  <meta name="description" content="Find your Connecticut representatives and official contact information, and explore REBs tools and resources.">
+  <link rel="canonical" href="https://rebsct.com/tools/">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/tools.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;family=Noto+Serif:wdth,wght@75,800&amp;display=swap" rel="stylesheet">
+  <script async src="https://tally.so/widgets/embed.js"></script>
+  <script defer src="../scripts/member-signup.js"></script>
+  <script type="module" src="../scripts/representative-lookup.js"></script>
 </head>
-<body>
-    <nav class="nav">
-        <a href="../index.html" class="logo"><img src="../images/logo-rebs.png" alt="Logo"></a>
+<body class="tools-page">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="nav" aria-label="Main navigation">
+        <a href="../index.html" class="logo"><img src="../images/logo-rebs.png" alt="REBs — Moving Forward"></a>
         <div class="nav-container">
             <ul class="nav-links nav-links-small">
                 <li>✊ <a href="#member-signup" data-member-signup>
         Become a Member</a></li>
             </ul>
-        <div class="nav-container">
-
             <ul class="nav-links">
                 <li><a href="../who-we-are/index.html">Who We Are</a></li>
                 <li><a href="../our-mission/index.html">Our Mission</a></li>
                 <li><a href="../take-action/">Take Action</a></li>
-                <li><a href="index.html">Tools & Resources</a></li>
+                <li><a href="../tools/index.html" aria-current="page">Tools & Resources</a></li>
                 <li><a href="../gallery/index.html">Gallery</a></li>
             </ul>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">
+        <button class="hamburger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-navigation">
             <div></div>
             <div></div>
             <div></div>
-        </div>
+        </button>
     </nav>
-
-    <div class="mobile-menu">
+  <div class="mobile-menu" id="mobile-navigation">
         <a href="../who-we-are/index.html">Who We Are</a>
         <a href="../our-mission/index.html">Our Mission</a>
         <a href="../take-action/">Take Action</a>
-        <a href="index.html">Tools & Resources</a>
+        <a href="../tools/index.html" aria-current="page">Tools & Resources</a>
         <a href="../gallery/index.html">Gallery</a>
         <a href="#member-signup" data-member-signup>Become a Member</a>
     </div>
+  <main id="main-content" tabindex="-1">
+    <header class="tools-hero">
+      <img src="../images/tools.jpg" alt="" fetchpriority="high">
+      <div class="tools-hero-copy"><h1>Tools &amp; resources</h1><p>Know your representatives.<br>Find your next step.</p></div>
+    </header>
+    <div class="tools-content">
+      <section id="know-your-rep" aria-labelledby="know-your-rep-title">
+        <h2 id="know-your-rep-title">Know your rep</h2>
+        <p class="tools-intro">Know who represents you—and how to reach them. These statewide officials serve everyone in Connecticut.</p>
+        <div class="official-grid"><article class="official-card" data-statewide-office="CT-governor" data-chamber="governor" data-checked-at="2026-10-20" data-valid-until="2027-01-06T15:00:00Z" aria-labelledby="CT-governor-name">
+    <p class="office-label">Governor</p>
+    <h3 id="CT-governor-name" data-official-name>Ned Lamont</h3>
+    <p class="office-term" data-official-term>Term: 2023–2027</p>
+    <a data-official-link href="https://portal.ct.gov/governor" target="_blank" rel="noopener noreferrer">Official website <span class="visually-hidden">for Ned Lamont</span> <span aria-hidden="true">↗</span></a>
+  </article>
+<article class="official-card" data-statewide-office="CT-us-senate-1" data-chamber="us-senate" data-checked-at="2026-10-20" data-valid-until="2027-01-03T17:00:00Z" aria-labelledby="CT-us-senate-1-name">
+    <p class="office-label">U.S. senator</p>
+    <h3 id="CT-us-senate-1-name" data-official-name>Chris Murphy</h3>
+    <p class="office-term" data-official-term>Term: 2025–2031</p>
+    <a data-official-link href="https://www.murphy.senate.gov/" target="_blank" rel="noopener noreferrer">Official website <span class="visually-hidden">for Chris Murphy</span> <span aria-hidden="true">↗</span></a>
+  </article>
+<article class="official-card" data-statewide-office="CT-us-senate-3" data-chamber="us-senate" data-checked-at="2026-10-20" data-valid-until="2027-01-03T17:00:00Z" aria-labelledby="CT-us-senate-3-name">
+    <p class="office-label">U.S. senator</p>
+    <h3 id="CT-us-senate-3-name" data-official-name>Richard Blumenthal</h3>
+    <p class="office-term" data-official-term>Term: 2023–2029</p>
+    <a data-official-link href="https://www.blumenthal.senate.gov/" target="_blank" rel="noopener noreferrer">Official website <span class="visually-hidden">for Richard Blumenthal</span> <span aria-hidden="true">↗</span></a>
+  </article></div>
+        <p class="statewide-status" data-statewide-status role="status" hidden></p>
+      </section>
+      <section class="lookup-section" aria-labelledby="lookup-title">
+        <h2 id="lookup-title">Find your district officials</h2>
+        <p class="tools-intro">Enter your Connecticut street address to find your U.S. representative, state representative, and state senator.</p>
+        <form class="lookup-form" data-lookup-form method="post" hidden aria-describedby="lookup-privacy">
+          <div class="address-fields">
+            <div class="street-field"><label for="lookup-street">Street address</label><input id="lookup-street" name="street" type="text" autocomplete="street-address" required maxlength="180" placeholder="123 Main Street"></div>
+            <div><label for="lookup-city">Town or city</label><input id="lookup-city" name="city" type="text" autocomplete="address-level2" required maxlength="80"></div>
+            <div><label for="lookup-zip">ZIP <span>(optional)</span></label><input id="lookup-zip" name="zip" type="text" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{5}(-[0-9]{4})?" maxlength="10"></div>
+          </div>
+          <p class="state-coverage">State: Connecticut</p>
+          <p class="lookup-privacy" id="lookup-privacy">Your address is sent through our lookup service to the U.S. Census Bureau to identify your districts. REBs does not save it. <a href="../privacy-policy/index.html#representative-lookup">Privacy details</a></p>
+          <div class="lookup-actions"><button class="lookup-primary" type="submit">Find my officials</button><button class="lookup-cancel" data-lookup-cancel type="button" hidden>Cancel</button></div>
+        </form>
+        <noscript><p class="lookup-fallback">Enable JavaScript to look up an address here, or use the official Connecticut finder below. The statewide office links remain available.</p></noscript>
+        <p class="lookup-status" data-lookup-status role="status" aria-live="polite" aria-atomic="true"></p>
+        <button class="lookup-retry" data-lookup-retry type="button" hidden>Try again</button>
+        <div class="lookup-results" data-lookup-results tabindex="-1" aria-label="District lookup results"></div>
+        <p class="lookup-fallback"><a href="https://www.cga.ct.gov/webapps/cgafyl.asp" target="_blank" rel="noopener noreferrer">Use the official Connecticut legislator finder ↗</a><br><a href="https://www.house.gov/representatives/find-your-representative" target="_blank" rel="noopener noreferrer">Find a U.S. representative outside Connecticut ↗</a></p>
+      </section>
+      <section class="scorecard-feature" aria-labelledby="scorecard-title">
+        <h2 id="scorecard-title">Accountability Scorecard</h2>
+        <p>Explore the records of U.S. House members, with sources you can check.</p>
+        <a href="https://accountabilityscorecard.org/" target="_blank" rel="noopener noreferrer">Open the Accountability Scorecard <span aria-hidden="true">↗</span><span class="visually-hidden"> (separate website)</span></a>
+      </section>
 
-    <script>
-    function toggleMenu() {
-        const mobileMenu = document.querySelector(".mobile-menu");
-        const hamburger = document.querySelector(".hamburger");
-    
-        mobileMenu.classList.toggle("active");
-        hamburger.classList.toggle("active");
-}
-    </script>
-
-
-<div class="container image-container">
-   <img class="cropped-image" src="../images/tools.jpg">
-   <div class="hero-overlay"><h1 class="hero-headline">Tools & Resources</h1></div>
-</div>
-
-
-
-
-
-
-<main class="under-construction">
-  <section class="under-construction-card" aria-labelledby="construction-heading">
-    <p class="under-construction-label">Tools &amp; Resources</p>
-    <h2 id="construction-heading">Under Construction</h2>
-    <p>We’re updating this page with new ways to take action and stay informed. Please check back soon.</p>
-  </section>
-</main>
-
-  
-
-<div>
-  <img class="foot-topper" src="../images/crowd-footer.jpg" alt="silouette of crowd">
-</div>  
+    </div>
+  </main>
+  <img class="foot-topper" src="../images/crowd-footer.jpg" alt="Silhouette of a crowd holding signs" loading="lazy">
   <footer>
         <div class="footer-column">
-          <a href="index.html">Home</a>
+          <a href="../index.html">Home</a>
         <a href="../who-we-are/index.html">Who We Are</a>
         <a href="../our-mission/index.html">Our Mission</a>
           <a href="../take-action/">Take Action</a>
         </div>
         <div class="footer-column">
-            <a href="index.html">Tools &amp; Resources</a>
+            <a href="../tools/index.html">Tools &amp; Resources</a>
              <a href="#member-signup" data-member-signup>Become a member</a>
             <a href="#tally-open=w2orMD&amp;tally-layout=modal&amp;tally-emoji-animation=none">Contact Us</a>
             <a href="../privacy-policy/index.html">Privacy Policy</a>
@@ -162,9 +126,8 @@
 </a>
 
 </p>
-        
+
         </div>
     </footer>
-    
 </body>
 </html>

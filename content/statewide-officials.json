@@ -1,0 +1,40 @@
+[
+  {
+    "officeKey": "CT-governor",
+    "chamber": "governor",
+    "office": "Governor",
+    "name": "Ned Lamont",
+    "officialUrl": "https://portal.ct.gov/governor",
+    "sourceUrl": "https://portal.ct.gov/governor",
+    "checkedAt": "2026-10-20",
+    "validUntil": "2027-01-06T15:00:00Z",
+    "termStart": "2023-01-04T17:00:00Z",
+    "termEnd": "2027-01-06T15:00:00Z"
+  },
+  {
+    "officeKey": "CT-us-senate-1",
+    "chamber": "us-senate",
+    "district": "1",
+    "office": "U.S. senator",
+    "name": "Chris Murphy",
+    "officialUrl": "https://www.murphy.senate.gov/",
+    "sourceUrl": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
+    "checkedAt": "2026-10-20",
+    "validUntil": "2027-01-03T17:00:00Z",
+    "termStart": "2025-01-03T17:00:00Z",
+    "termEnd": "2031-01-03T17:00:00Z"
+  },
+  {
+    "officeKey": "CT-us-senate-3",
+    "chamber": "us-senate",
+    "district": "3",
+    "office": "U.S. senator",
+    "name": "Richard Blumenthal",
+    "officialUrl": "https://www.blumenthal.senate.gov/",
+    "sourceUrl": "https://www.senate.gov/general/contact_information/senators_cfm.xml",
+    "checkedAt": "2026-10-20",
+    "validUntil": "2027-01-03T17:00:00Z",
+    "termStart": "2023-01-03T17:00:00Z",
+    "termEnd": "2029-01-03T17:00:00Z"
+  }
+]
