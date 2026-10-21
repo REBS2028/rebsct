@@ -124,7 +124,8 @@ test('missing live officials remove static predecessors, while whole-service out
   const missing = setup({ statewideFetch: async () => new Response(JSON.stringify({ status: 'partial', offices: [] })) }); await missing.app.statewideReady;
   assert.doesNotMatch(missing.doc.querySelector('.official-grid').textContent, /Chris Murphy|Richard Blumenthal|Ned Lamont/);
   const outage = setup({ statewideFetch: async () => { throw new Error('Network unavailable'); } }); await outage.app.statewideReady;
-  assert.match(outage.doc.querySelector('.official-grid').textContent, /Chris Murphy/); assert.match(outage.doc.querySelector('[data-statewide-status]').textContent, /Live updates are unavailable/);
+  assert.match(outage.doc.querySelector('.official-grid').textContent, /Chris Murphy/);
+  assert.equal(outage.doc.querySelector('[data-statewide-status]').textContent, ''); assert.equal(outage.doc.querySelector('[data-statewide-status]').hidden, true);
 });
 
 test('district cards show office terms and prefer verified official websites without check dates', () => {

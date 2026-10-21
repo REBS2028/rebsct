@@ -147,7 +147,7 @@ export function mountRepresentativeLookup({ root = document, browser = window, f
       }
       note.textContent = data.status === 'partial' || data.offices.some(o => o.status === 'unavailable') ? 'Some officials could not be verified. Use the official office links.' : '';
       note.hidden = !note.textContent;
-    } catch { note.textContent = 'Live updates are unavailable. Confirm current details with the official offices.'; note.hidden = false; }
+    } catch { note.textContent = ''; note.hidden = true; }
   }
   const statewideReady = refreshStatewide();
   return { lookup, statewideReady, destroy() { current?.controller.abort(); sequence++; } };
