@@ -33,6 +33,8 @@ body.take-action-page { color:#242d40; background:#fff; font:400 18px/1.6 'Monts
 .take-action-page .featured-action h3 { color:#fff; font:650 32px/1.2 'Montserrat',sans-serif; letter-spacing:-.035em; margin-bottom:17px; max-width:600px; overflow-wrap:anywhere; }
 .action-description { color:#e5eafb; font-size:16px; line-height:1.8; overflow-wrap:anywhere; }
 .action-description p + p, .action-description :is(ul,ol,blockquote,pre) { margin-top:14px !important; }
+.action-description p + :is(ul,ol) { margin-top:4px !important; }
+.action-description :is(ul,ol) + p { margin-top:14px !important; }
 .action-description :is(ul,ol) { padding-left:24px; }
 .action-description pre { white-space:pre-wrap; }
 .take-action-page .featured-action .action-description a { color:#fff; text-decoration:underline; }
@@ -40,12 +42,12 @@ body.take-action-page { color:#242d40; background:#fff; font:400 18px/1.6 'Monts
 .take-action-page .primary-action { display:inline-flex; gap:20px; align-items:center; justify-content:center; background:#fff; color:#33498e; border-radius:6px; padding:13px 18px; font-size:15px; line-height:1.4; text-decoration:none; font-weight:650; text-align:center; min-height:46px; }
 .primary-action span { flex:none; }
 .take-action-page .primary-action:hover { background:#e9eefb; }
-.other-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
-.other-action { min-width:0; padding:28px 28px 0 0; scroll-margin-top:24px; }
-.other-action:nth-child(even) { margin-top:28px; padding:0 0 0 28px; border-left:1px solid #dfe4ec; }
-.other-action:nth-child(n+3) { margin-top:28px; border-top:1px solid #dfe4ec; padding-top:28px; }
-.take-action-page .other-action h3 { font:600 20px/1.4 'Montserrat',sans-serif; letter-spacing:-.025em; color:#242d40; margin-bottom:10px; overflow-wrap:anywhere; }
+.other-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; column-gap:32px; margin-top:8px; }
+.other-actions[data-action-empty-slot]::after { content:''; display:block; width:min(224px,80%); height:240px; margin:0; place-self:center; background:url('../images/community-care.svg') center / contain no-repeat; pointer-events:none; }
+.other-action { min-width:0; padding:22px 0 16px; border-bottom:1px solid #dfe4ec; scroll-margin-top:24px; }
+.take-action-page .other-action h3 { font:600 19px/1.4 'Montserrat',sans-serif; letter-spacing:-.02em; color:#242d40; margin-bottom:10px; overflow-wrap:anywhere; }
 .other-action .action-description { color:#626b7c; font-size:15px; line-height:1.75; }
+.other-action .action-description p + p { margin-top:12px !important; }
 .action-cta { margin-top:15px; }
 .text-action { display:inline-block; font-size:14px; font-weight:600; text-decoration:none; }
 .text-action:hover { text-decoration:underline; }
@@ -100,6 +102,8 @@ body.take-action-page { color:#242d40; background:#fff; font:400 18px/1.6 'Monts
   .action-page-content { width:calc(100% - 40px); padding-top:28px; }
   .featured-action { grid-template-columns:1fr; padding:28px; }
   .feature-cta { align-items:flex-start; }
+  .other-actions { grid-template-columns:1fr; }
+  .other-actions[data-action-empty-slot]::after { content:none; display:none; }
   .take-action-page .organization-list { grid-template-columns:1fr; }
   .take-action-page .footer-column { padding:30px; }
 }
@@ -111,9 +115,7 @@ body.take-action-page { color:#242d40; background:#fff; font:400 18px/1.6 'Monts
   .take-action-page main h2 { font-size:23px; }
   .featured-action { padding:24px; border-radius:8px; gap:24px; }
   .take-action-page .featured-action h3 { font-size:27px; }
-  .other-actions { display:block; }
-  .other-action, .other-action:nth-child(even) { margin:0; padding:24px 0; border-left:0; }
-  .other-action + .other-action { padding-top:24px; border-top:1px solid #dfe4ec; }
+  .take-action-page .other-action h3 { font-size:18px; }
   .event { grid-template-columns:53px minmax(0,1fr); gap:16px; }
   .event-date { width:53px; height:65px; }
   .take-action-page .event-title { font-size:17px; }

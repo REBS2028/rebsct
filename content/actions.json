@@ -1,5 +1,24 @@
 [
   {
+    "id": "election-day-watch-party",
+    "title": "Election Day Watch Party",
+    "bodyMarkdown": "**Tuesday, November 3 · 7–11 PM** at **Nod Hill Brewery**, 137 Ethan Allen Hwy, Ridgefield.\n\nBe in community as we watch the midterm elections unfold! Food truck until\n8:30 (or bring your own food!) Cash bar. All welcomed!",
+    "summary": "November 3, 7–11 PM at Nod Hill Brewery in Ridgefield. Food truck until 8:30 PM (or bring your own food). Cash bar. All welcome!",
+    "displayOrder": 10,
+    "isFeatured": true,
+    "endDate": "2026-11-03"
+  },
+  {
+    "id": "arc-coat-drive",
+    "title": "ARC coat drive: Everybody gets a coat",
+    "bodyMarkdown": "Help our neighbors stay warm this winter. All donations will be delivered to ARC (Association of Religious Communities) in Danbury.\n\nWe’re collecting:\n\n- Coats and jackets for all ages and sizes, new or gently used\n- Warm socks — new only\n- Hats, gloves, and scarves\n\n**Drop off donations in the collection box at Tusk & Cup in Ridgefield through November 30, 2026.** Please make sure all items are clean and in good condition.",
+    "summary": "Donate coats and warm clothing in the collection box at Tusk & Cup in Ridgefield through November 30. All donations go to ARC in Danbury.",
+    "displayOrder": 20,
+    "isFeatured": true,
+    "endDate": "2026-11-30",
+    "featureStartDate": "2026-11-04"
+  },
+  {
     "id": "midterm-mixer",
     "title": "REBs Midterm Mixer — October 4",
     "bodyMarkdown": "**Voting is our superpower!** Join us from **noon–3 PM on October 4** at **Nod Hill Brewery, Ridgefield**, to celebrate our democracy, our freedom to vote, and each other.\n\nFood trucks, live music, voter registration, swag and more! Time spent in community inspires, energizes, and reminds us why showing up matters — especially heading into the midterm elections.",
@@ -9,7 +28,7 @@
       "href": "https://www.mobilize.us/rebs/event/997937"
     },
     "displayOrder": 10,
-    "isFeatured": true,
+    "isFeatured": false,
     "endDate": "2026-10-04"
   }
 ]

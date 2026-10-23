@@ -1,21 +1,24 @@
-import { selectActions } from './action-content.mjs';
+import { actionAttributes, selectActions } from './action-content.mjs';
+import { actionExpired, connecticutDate } from '../date-utils.js';
 import { escapeHtml } from './content-markdown.mjs';
 import { ELECTION_DAY, EARLY_VOTING_START, EARLY_VOTING_END } from '../election-model.js';
 
-export function renderHomeFeature(records, today) {
+export function renderHomeFeature(records, today = connecticutDate()) {
   const { featured } = selectActions(records, today);
-  if (!featured) return '';
-  const target = `/take-action/#${featured.id}`;
-  const external = featured.cta && /^https?:/i.test(featured.cta.href);
-  return `<article class="home-feature" data-action${featured.endDate ? ` data-action-end-date="${featured.endDate}"` : ''} aria-labelledby="home-feature-heading">
-    <div><p class="home-feature-label">Featured action</p>
-    <h2 id="home-feature-heading"><a href="${target}">${escapeHtml(featured.title)}</a></h2>
-    <p class="home-feature-description">${escapeHtml(featured.summary)}</p></div>
-    <div class="home-feature-links">
-      ${featured.cta ? `<a class="home-feature-cta" href="${escapeHtml(featured.cta.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escapeHtml(featured.cta.label)} <span aria-hidden="true">${external ? '↗' : '→'}</span></a>` : ''}
-      <a class="home-more-actions" href="${target}">More on Take Action <span aria-hidden="true">→</span></a>
-    </div>
-  </article>`;
+  // Keep future features in the page so the browser can switch without a new build.
+  return records.filter(record => record.isFeatured && !actionExpired(record.endDate, today)).map(record => {
+    const target = `/take-action/#${record.id}`;
+    const external = record.cta && /^https?:/i.test(record.cta.href);
+    return `<article class="home-feature" ${actionAttributes(record)}${record === featured ? '' : ' hidden'} aria-labelledby="home-feature-heading-${record.id}">
+      <div><p class="home-feature-label">Featured action</p>
+      <h2 id="home-feature-heading-${record.id}"><a href="${target}">${escapeHtml(record.title)}</a></h2>
+      <p class="home-feature-description">${escapeHtml(record.summary)}</p></div>
+      <div class="home-feature-links">
+        ${record.cta ? `<a class="home-feature-cta" href="${escapeHtml(record.cta.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${escapeHtml(record.cta.label)} <span aria-hidden="true">${external ? '↗' : '→'}</span></a>` : ''}
+        <a class="home-more-actions" href="${target}">More on Take Action <span aria-hidden="true">→</span></a>
+      </div>
+    </article>`;
+  }).join('\n');
 }
 
 export function renderElection() {

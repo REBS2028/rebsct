@@ -35,14 +35,17 @@ Each action has:
 | `summary` | Optional plain text for the compact homepage feature; otherwise derived from the first paragraph. |
 | `cta` | Optional `{ "label": "Donate", "href": "https://…" }`. Omit the whole field when no button is needed. |
 | `displayOrder` | Integer; lower values appear first. Leave gaps such as 10, 20, 30. |
-| `isFeatured` | Required boolean. Zero or one record can be true. The build fails if two are featured, even if one has expired. |
+| `isFeatured` | Required boolean. Marks an action for featuring. Featured date ranges must not overlap, including expired records. |
+| `featureStartDate` | Optional inclusive Connecticut date for featuring, such as `2026-11-04`. Requires `isFeatured: true`; before this date the action remains listed as an ordinary action. |
 | `endDate` | Optional inclusive date, such as `2026-10-31`, in Connecticut's time zone. |
 
-Actions exist until removed or expired. There is no active/status field. Retire an action by removing it; Git retains history. The featured action appears once, then ordinary actions are sorted by order and ID. Expiring a featured action does not promote another one.
+Actions exist until removed or expired. There is no active/status field. Retire an action by removing it; Git retains history. The featured action appears once, then ordinary actions are sorted by order and ID. A featured range runs from `featureStartDate` (or immediately when omitted) through `endDate` (or indefinitely when omitted). Schedule a replacement by giving it a non-overlapping featured range; ordinary actions are never promoted without an explicit featured schedule. `featureStartDate` controls highlighting only, so a future feature stays in the ordinary action list until its turn.
 
 Links accept HTTP(S), root-relative site paths, or a page anchor. Executable URLs and embedded images are unsupported. Empty required fields, unknown fields, duplicate/reserved IDs, invalid dates, and incomplete buttons fail the build.
 
-Expiration runs during the build and in the browser on load, tab resume, and every 30 seconds. An item stays visible through its `endDate` in Connecticut. With JavaScript disabled, it is removed on the next build/publish. A visitor whose computer clock is incorrect may see incorrect expiry timing.
+Expiration and feature selection run during the build and in the browser on load, tab resume, and every 30 seconds. Future homepage features are pre-rendered and hidden until their turn; Take Action promotes the same scheduled action in place. Switching needs no rebuild or external scheduler. An item stays visible through its `endDate` in Connecticut. With JavaScript disabled, changes take effect on the next build/publish. A visitor whose computer clock is incorrect may see incorrect expiry timing.
+
+The ordinary-action grid matches the organization columns. On desktop, an odd number of visible ordinary actions leaves a final slot filled by the decorative light-blue `images/community-care.svg` illustration. It disappears when the row fills, when no ordinary actions remain, and when the grid stacks on mobile. The build and browser refresh both update this condition; expired and featured actions do not count toward it.
 
 ## Organizations to support
 
